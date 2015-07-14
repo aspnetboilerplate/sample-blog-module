@@ -2,12 +2,12 @@
 
 namespace Abp.Samples.Blog.Auth
 {
-    //public class PermissionChecker : PermissionChecker<BlogTenant, BlogRole, BlogUser>
-    //{
-    //    public PermissionChecker(UserManager userManager)
-    //        : base(userManager)
-    //    {
+    public class PermissionChecker : PermissionChecker<BlogTenant, BlogRole, BlogUser>
+    {
+        public PermissionChecker(UserManager userManager)
+            : base(userManager)
+        {
 
-    //    }
-    //}
+        }
+    }
 }
