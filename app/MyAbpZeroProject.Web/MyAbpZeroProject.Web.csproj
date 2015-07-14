@@ -52,6 +52,15 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Abp.EntityFramework.0.6.4.0\lib\net451\Abp.EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Abp.Samples.Blog.Application">
+      <HintPath>..\..\src\Abp.Samples.Blog.Application\bin\Debug\Abp.Samples.Blog.Application.dll</HintPath>
+    </Reference>
+    <Reference Include="Abp.Samples.Blog.Core">
+      <HintPath>..\..\src\Abp.Samples.Blog.Core\bin\Debug\Abp.Samples.Blog.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Abp.Samples.Blog.EntityFramework">
+      <HintPath>..\..\src\Abp.Samples.Blog.EntityFramework\bin\Debug\Abp.Samples.Blog.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Abp.Web, Version=0.6.4.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Abp.Web.0.6.4.0\lib\net451\Abp.Web.dll</HintPath>

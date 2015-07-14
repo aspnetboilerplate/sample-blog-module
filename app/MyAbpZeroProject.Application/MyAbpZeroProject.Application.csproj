@@ -40,6 +40,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Abp.AutoMapper.0.6.4.0\lib\net451\Abp.AutoMapper.dll</HintPath>
     </Reference>
+    <Reference Include="Abp.Samples.Blog.Application">
+      <HintPath>..\..\src\Abp.Samples.Blog.Application\bin\Debug\Abp.Samples.Blog.Application.dll</HintPath>
+    </Reference>
     <Reference Include="Abp.Zero, Version=0.6.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.Zero.0.6.4.0\lib\net451\Abp.Zero.dll</HintPath>
       <Private>True</Private>

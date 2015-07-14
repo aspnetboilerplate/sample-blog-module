@@ -1,0 +1,265 @@
+DEBUG 2015-07-14 15:48:22,918 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-07-14 15:49:15,060 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-07-14 15:50:58,582 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-07-14 15:51:00,432 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2015-07-14 15:51:00,436 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:51:00,438 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:51:00,438 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:51:00,438 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Samples.Blog.AbpSampleBlogApplicationModule, Abp.Samples.Blog.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:51:00,438 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Samples.Blog.AbpSampleBlogCoreModule, Abp.Samples.Blog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:51:00,438 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Samples.Blog.EntityFramework.AbpSampleBlogEntityFrameworkModule, Abp.Samples.Blog.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:51:00,439 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:51:00,439 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:51:00,439 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:51:00,439 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:51:00,439 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:51:00,439 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyAbpZeroProject.MyAbpZeroProjectApplicationModule, MyAbpZeroProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:51:00,439 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyAbpZeroProject.MyAbpZeroProjectCoreModule, MyAbpZeroProject.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:51:00,948 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyAbpZeroProject.MyAbpZeroProjectDataModule, MyAbpZeroProject.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:51:00,948 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyAbpZeroProject.Web.MyAbpZeroProjectWebModule, MyAbpZeroProject.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:51:00,948 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyAbpZeroProject.MyAbpZeroProjectWebApiModule, MyAbpZeroProject.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:51:00,955 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2015-07-14 15:51:02,954 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-07-14 15:51:02,954 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Abp.Samples.Blog.Posts.Dtos.PostDto
+DEBUG 2015-07-14 15:51:03,351 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyAbpZeroProject.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2015-07-14 15:51:03,360 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyAbpZeroProject.Sessions.Dto.UserLoginInfoDto
+DEBUG 2015-07-14 15:51:04,865 [1    ] Default                                  - Dynamic web api controller is created for type 'MyAbpZeroProject.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2015-07-14 15:51:06,313 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2015-07-14 15:51:06,351 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2015-07-14 15:51:06,351 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2015-07-14 15:51:06,371 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: MyAbpZeroProject
+DEBUG 2015-07-14 15:51:06,372 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-07-14 15:58:08,703 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-07-14 15:58:10,499 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2015-07-14 15:58:10,503 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:58:10,504 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:58:10,504 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:58:10,504 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Samples.Blog.AbpSampleBlogApplicationModule, Abp.Samples.Blog.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:58:10,504 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Samples.Blog.AbpSampleBlogCoreModule, Abp.Samples.Blog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:58:10,505 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Samples.Blog.EntityFramework.AbpSampleBlogEntityFrameworkModule, Abp.Samples.Blog.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:58:10,505 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:58:10,505 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:58:10,505 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:58:10,505 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:58:10,505 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:58:10,505 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyAbpZeroProject.MyAbpZeroProjectApplicationModule, MyAbpZeroProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:58:10,505 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyAbpZeroProject.MyAbpZeroProjectCoreModule, MyAbpZeroProject.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:58:10,505 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyAbpZeroProject.MyAbpZeroProjectDataModule, MyAbpZeroProject.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:58:10,505 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyAbpZeroProject.Web.MyAbpZeroProjectWebModule, MyAbpZeroProject.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:58:10,506 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyAbpZeroProject.MyAbpZeroProjectWebApiModule, MyAbpZeroProject.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:58:10,509 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2015-07-14 15:58:11,822 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-07-14 15:58:11,822 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Abp.Samples.Blog.Posts.Dtos.PostDto
+DEBUG 2015-07-14 15:58:11,942 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyAbpZeroProject.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2015-07-14 15:58:11,948 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyAbpZeroProject.Sessions.Dto.UserLoginInfoDto
+DEBUG 2015-07-14 15:58:13,327 [1    ] Default                                  - Dynamic web api controller is created for type 'MyAbpZeroProject.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2015-07-14 15:58:13,536 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2015-07-14 15:58:13,540 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2015-07-14 15:58:13,541 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2015-07-14 15:58:13,566 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: MyAbpZeroProject
+DEBUG 2015-07-14 15:58:13,566 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+DEBUG 2015-07-14 15:59:38,311 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-07-14 15:59:40,197 [1    ] Abp.Modules.AbpModuleManager             - Found 16 ABP modules in total.
+DEBUG 2015-07-14 15:59:40,201 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:59:40,203 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:59:40,203 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:59:40,203 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Samples.Blog.AbpSampleBlogApplicationModule, Abp.Samples.Blog.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:59:40,203 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Samples.Blog.AbpSampleBlogCoreModule, Abp.Samples.Blog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:59:40,203 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Samples.Blog.EntityFramework.AbpSampleBlogEntityFrameworkModule, Abp.Samples.Blog.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:59:40,203 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:59:40,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:59:40,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:59:40,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:59:40,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:59:40,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyAbpZeroProject.MyAbpZeroProjectApplicationModule, MyAbpZeroProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:59:40,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyAbpZeroProject.MyAbpZeroProjectCoreModule, MyAbpZeroProject.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:59:40,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyAbpZeroProject.MyAbpZeroProjectDataModule, MyAbpZeroProject.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:59:40,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyAbpZeroProject.Web.MyAbpZeroProjectWebModule, MyAbpZeroProject.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:59:40,204 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyAbpZeroProject.MyAbpZeroProjectWebApiModule, MyAbpZeroProject.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-14 15:59:40,207 [1    ] Abp.Modules.AbpModuleManager             - 16 modules loaded.
+DEBUG 2015-07-14 15:59:41,599 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-07-14 15:59:41,599 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Abp.Samples.Blog.Posts.Dtos.PostDto
+DEBUG 2015-07-14 15:59:41,720 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyAbpZeroProject.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2015-07-14 15:59:41,726 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyAbpZeroProject.Sessions.Dto.UserLoginInfoDto
+DEBUG 2015-07-14 15:59:43,138 [1    ] Default                                  - Dynamic web api controller is created for type 'MyAbpZeroProject.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2015-07-14 15:59:43,349 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2015-07-14 15:59:43,354 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2015-07-14 15:59:43,354 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2015-07-14 15:59:43,406 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: MyAbpZeroProject
+DEBUG 2015-07-14 15:59:43,406 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb
+ERROR 2015-07-14 16:00:59,811 [13   ] .Mvc.Controllers.AbpHandleErrorAttribute - System.NotSupportedException: The specified LINQ expression contains references to queries that are associated with different contexts.
+   at System.Data.Entity.Core.Objects.ELinq.Funcletizer.FuncletizingVisitor.InlineObjectQuery(ObjectQuery inlineQuery, Type expressionType)
+   at System.Data.Entity.Core.Objects.ELinq.Funcletizer.FuncletizingVisitor.InlineValue(Expression expression, Boolean recompileOnChange)
+   at System.Data.Entity.Core.Objects.ELinq.Funcletizer.FuncletizingVisitor.Visit(Expression exp)
+   at System.Linq.Expressions.EntityExpressionVisitor.VisitMethodCall(MethodCallExpression m)
+   at System.Linq.Expressions.EntityExpressionVisitor.Visit(Expression exp)
+   at System.Data.Entity.Core.Objects.ELinq.Funcletizer.FuncletizingVisitor.Visit(Expression exp)
+   at System.Linq.Expressions.EntityExpressionVisitor.VisitExpressionList(ReadOnlyCollection`1 original)
+   at System.Linq.Expressions.EntityExpressionVisitor.VisitMethodCall(MethodCallExpression m)
+   at System.Linq.Expressions.EntityExpressionVisitor.Visit(Expression exp)
+   at System.Data.Entity.Core.Objects.ELinq.Funcletizer.FuncletizingVisitor.Visit(Expression exp)
+   at System.Linq.Expressions.EntityExpressionVisitor.VisitExpressionList(ReadOnlyCollection`1 original)
+   at System.Linq.Expressions.EntityExpressionVisitor.VisitMethodCall(MethodCallExpression m)
+   at System.Linq.Expressions.EntityExpressionVisitor.Visit(Expression exp)
+   at System.Data.Entity.Core.Objects.ELinq.Funcletizer.FuncletizingVisitor.Visit(Expression exp)
+   at System.Linq.Expressions.EntityExpressionVisitor.VisitExpressionList(ReadOnlyCollection`1 original)
+   at System.Linq.Expressions.EntityExpressionVisitor.VisitMethodCall(MethodCallExpression m)
+   at System.Linq.Expressions.EntityExpressionVisitor.Visit(Expression exp)
+   at System.Data.Entity.Core.Objects.ELinq.Funcletizer.FuncletizingVisitor.Visit(Expression exp)
+   at System.Data.Entity.Core.Objects.ELinq.Funcletizer.Funcletize(Expression expression, Func`1& recompileRequired)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter..ctor(Funcletizer funcletizer, Expression expression)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.CreateExpressionConverter()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Abp.Authorization.Users.AbpUserStore`3.<>c__DisplayClass49.<GetRolesAsync>b__48(IQueryable`1 userRoles)
+   at Abp.Domain.Repositories.AbpRepositoryBase`2.Query[T](Func`2 queryMethod)
+   at Castle.Proxies.EfRepositoryBase`3Proxy_3.Query_callback[T](Func`2 queryMethod)
+   at Castle.Proxies.Invocations.AbpRepositoryBase`2_Query_3.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.EfRepositoryBase`3Proxy_3.Query[T](Func`2 queryMethod)
+   at Abp.Authorization.Users.AbpUserStore`3.GetRolesAsync(TUser user)
+   at Microsoft.AspNet.Identity.UserManager`2.<GetRolesAsync>d__ac.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNet.Identity.TaskExtensions.CultureAwaiter`1.GetResult()
+   at Microsoft.AspNet.Identity.ClaimsIdentityFactory`2.<CreateAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Abp.Authorization.Users.AbpUserManager`3.<CreateIdentityAsync>d__52.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Abp.Authorization.Users.AbpUserManager`3.<LoginAsync>d__37.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Abp.Threading.InternalAsyncHelper.<ReturnGenericTaskAfterAction>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at MyAbpZeroProject.Web.Controllers.AccountController.<Login>d__3.MoveNext() in d:\Halil\Github3\sample-blog-module\app\MyAbpZeroProject.Web\Controllers\AccountController.cs:line 59
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at System.Threading.Tasks.TaskHelpersExtensions.ThrowIfFaulted(Task task)
+   at System.Web.Mvc.Async.TaskAsyncActionDescriptor.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeAsynchronousActionMethod>b__36(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+System.NotSupportedException: The specified LINQ expression contains references to queries that are associated with different contexts.
+   at System.Data.Entity.Core.Objects.ELinq.Funcletizer.FuncletizingVisitor.InlineObjectQuery(ObjectQuery inlineQuery, Type expressionType)
+   at System.Data.Entity.Core.Objects.ELinq.Funcletizer.FuncletizingVisitor.InlineValue(Expression expression, Boolean recompileOnChange)
+   at System.Data.Entity.Core.Objects.ELinq.Funcletizer.FuncletizingVisitor.Visit(Expression exp)
+   at System.Linq.Expressions.EntityExpressionVisitor.VisitMethodCall(MethodCallExpression m)
+   at System.Linq.Expressions.EntityExpressionVisitor.Visit(Expression exp)
+   at System.Data.Entity.Core.Objects.ELinq.Funcletizer.FuncletizingVisitor.Visit(Expression exp)
+   at System.Linq.Expressions.EntityExpressionVisitor.VisitExpressionList(ReadOnlyCollection`1 original)
+   at System.Linq.Expressions.EntityExpressionVisitor.VisitMethodCall(MethodCallExpression m)
+   at System.Linq.Expressions.EntityExpressionVisitor.Visit(Expression exp)
+   at System.Data.Entity.Core.Objects.ELinq.Funcletizer.FuncletizingVisitor.Visit(Expression exp)
+   at System.Linq.Expressions.EntityExpressionVisitor.VisitExpressionList(ReadOnlyCollection`1 original)
+   at System.Linq.Expressions.EntityExpressionVisitor.VisitMethodCall(MethodCallExpression m)
+   at System.Linq.Expressions.EntityExpressionVisitor.Visit(Expression exp)
+   at System.Data.Entity.Core.Objects.ELinq.Funcletizer.FuncletizingVisitor.Visit(Expression exp)
+   at System.Linq.Expressions.EntityExpressionVisitor.VisitExpressionList(ReadOnlyCollection`1 original)
+   at System.Linq.Expressions.EntityExpressionVisitor.VisitMethodCall(MethodCallExpression m)
+   at System.Linq.Expressions.EntityExpressionVisitor.Visit(Expression exp)
+   at System.Data.Entity.Core.Objects.ELinq.Funcletizer.FuncletizingVisitor.Visit(Expression exp)
+   at System.Data.Entity.Core.Objects.ELinq.Funcletizer.Funcletize(Expression expression, Func`1& recompileRequired)
+   at System.Data.Entity.Core.Objects.ELinq.ExpressionConverter..ctor(Funcletizer funcletizer, Expression expression)
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.CreateExpressionConverter()
+   at System.Data.Entity.Core.Objects.ELinq.ELinqQueryState.GetExecutionPlan(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__6()
+   at System.Data.Entity.Core.Objects.ObjectContext.ExecuteInTransaction[T](Func`1 func, IDbExecutionStrategy executionStrategy, Boolean startLocalTransaction, Boolean releaseConnectionOnSuccess)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<>c__DisplayClass7.<GetResults>b__5()
+   at System.Data.Entity.SqlServer.DefaultSqlExecutionStrategy.Execute[TResult](Func`1 operation)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.GetResults(Nullable`1 forMergeOption)
+   at System.Data.Entity.Core.Objects.ObjectQuery`1.<System.Collections.Generic.IEnumerable<T>.GetEnumerator>b__0()
+   at System.Data.Entity.Internal.LazyEnumerator`1.MoveNext()
+   at System.Collections.Generic.List`1..ctor(IEnumerable`1 collection)
+   at System.Linq.Enumerable.ToList[TSource](IEnumerable`1 source)
+   at Abp.Authorization.Users.AbpUserStore`3.<>c__DisplayClass49.<GetRolesAsync>b__48(IQueryable`1 userRoles)
+   at Abp.Domain.Repositories.AbpRepositoryBase`2.Query[T](Func`2 queryMethod)
+   at Castle.Proxies.EfRepositoryBase`3Proxy_3.Query_callback[T](Func`2 queryMethod)
+   at Castle.Proxies.Invocations.AbpRepositoryBase`2_Query_3.InvokeMethodOnTarget()
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Abp.Domain.Uow.UnitOfWorkInterceptor.Intercept(IInvocation invocation)
+   at Castle.DynamicProxy.AbstractInvocation.Proceed()
+   at Castle.Proxies.EfRepositoryBase`3Proxy_3.Query[T](Func`2 queryMethod)
+   at Abp.Authorization.Users.AbpUserStore`3.GetRolesAsync(TUser user)
+   at Microsoft.AspNet.Identity.UserManager`2.<GetRolesAsync>d__ac.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Microsoft.AspNet.Identity.TaskExtensions.CultureAwaiter`1.GetResult()
+   at Microsoft.AspNet.Identity.ClaimsIdentityFactory`2.<CreateAsync>d__0.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Abp.Authorization.Users.AbpUserManager`3.<CreateIdentityAsync>d__52.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Abp.Authorization.Users.AbpUserManager`3.<LoginAsync>d__37.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at Abp.Threading.InternalAsyncHelper.<ReturnGenericTaskAfterAction>d__3`1.MoveNext()
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter`1.GetResult()
+   at MyAbpZeroProject.Web.Controllers.AccountController.<Login>d__3.MoveNext() in d:\Halil\Github3\sample-blog-module\app\MyAbpZeroProject.Web\Controllers\AccountController.cs:line 59
+--- End of stack trace from previous location where exception was thrown ---
+   at System.Runtime.CompilerServices.TaskAwaiter.ThrowForNonSuccess(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.HandleNonSuccessAndDebuggerNotification(Task task)
+   at System.Runtime.CompilerServices.TaskAwaiter.GetResult()
+   at System.Threading.Tasks.TaskHelpersExtensions.ThrowIfFaulted(Task task)
+   at System.Web.Mvc.Async.TaskAsyncActionDescriptor.EndExecute(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass37.<BeginInvokeAsynchronousActionMethod>b__36(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethod(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3d()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.AsyncInvocationWithFilters.<>c__DisplayClass46.<InvokeActionMethodFilterAsynchronouslyRecursive>b__3f()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass33.<BeginInvokeActionMethodWithFilters>b__32(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResult`1.CallEndDelegate(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncResultWrapper.WrappedAsyncResultBase`1.End()
+   at System.Web.Mvc.Async.AsyncResultWrapper.End[TResult](IAsyncResult asyncResult, Object tag)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
+   at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)

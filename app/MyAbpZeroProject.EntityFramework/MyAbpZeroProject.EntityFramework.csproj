@@ -40,6 +40,9 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Abp.EntityFramework.0.6.4.0\lib\net451\Abp.EntityFramework.dll</HintPath>
     </Reference>
+    <Reference Include="Abp.Samples.Blog.EntityFramework">
+      <HintPath>..\..\src\Abp.Samples.Blog.EntityFramework\bin\Debug\Abp.Samples.Blog.EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="Abp.Zero, Version=0.6.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.Zero.0.6.4.0\lib\net451\Abp.Zero.dll</HintPath>
       <Private>True</Private>
