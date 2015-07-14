@@ -93,6 +93,15 @@
   <ItemGroup>
     <Compile Include="AbpZeroSampleDbContext.cs" />
     <Compile Include="AbpSampleBlogEntityFrameworkModule.cs" />
+    <Compile Include="Migrations\201507141034315_Added_Initial_Blog_Entities.cs" />
+    <Compile Include="Migrations\201507141034315_Added_Initial_Blog_Entities.Designer.cs">
+      <DependentUpon>201507141034315_Added_Initial_Blog_Entities.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201507141104288_Renamed_Tables.cs" />
+    <Compile Include="Migrations\201507141104288_Renamed_Tables.Designer.cs">
+      <DependentUpon>201507141104288_Renamed_Tables.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -104,6 +113,17 @@
       <Project>{CF891696-558F-47E4-A092-28A2565B9310}</Project>
       <Name>Abp.Samples.Blog.Core</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201507141034315_Added_Initial_Blog_Entities.resx">
+      <DependentUpon>201507141034315_Added_Initial_Blog_Entities.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201507141104288_Renamed_Tables.resx">
+      <DependentUpon>201507141104288_Renamed_Tables.cs</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="READ_ME.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
