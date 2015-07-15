@@ -2,17 +2,17 @@
 using System.Linq;
 using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
-using Abp.Domain.Repositories;
 using Abp.Linq.Extensions;
+using Abp.Samples.Blog.Domain.Repositories;
 using Abp.Samples.Blog.Posts.Dtos;
 
 namespace Abp.Samples.Blog.Posts
 {
     public class PostAppService : BlogAppServiceBase, IPostAppService
     {
-        private readonly IRepository<Post> _postRepository;
+        private readonly ISampleBlogRepository<Post> _postRepository;
 
-        public PostAppService(IRepository<Post> postRepository)
+        public PostAppService(ISampleBlogRepository<Post> postRepository)
         {
             _postRepository = postRepository;
         }

@@ -1,13 +1,22 @@
 ﻿using System.Data.Common;
 using System.Data.Entity;
+using Abp.EntityFramework.Repositories;
 using Abp.Samples.Blog.Auth;
 using Abp.Samples.Blog.Categories;
 using Abp.Samples.Blog.Comments;
+using Abp.Samples.Blog.Domain.Repositories;
+using Abp.Samples.Blog.EntityFramework.Repositories;
 using Abp.Samples.Blog.Posts;
 using Abp.Zero.EntityFramework;
 
 namespace Abp.Samples.Blog.EntityFramework
 {
+    [AutoRepositoryTypes(
+        typeof(ISampleBlogRepository<>),
+        typeof(ISampleBlogRepository<,>),
+        typeof(SampleBlogRepositoryBase<>),
+        typeof(SampleBlogRepositoryBase<,>)
+        )]
     public class SampleBlogDbContext : AbpZeroDbContext<BlogTenant, BlogRole, BlogUser>
     {
         public IDbSet<Post> Posts { get; set; }
