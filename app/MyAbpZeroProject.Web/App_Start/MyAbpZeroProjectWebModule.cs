@@ -6,10 +6,11 @@ using System.Web.Routing;
 using Abp.Localization;
 using Abp.Localization.Sources.Xml;
 using Abp.Modules;
+using Abp.Samples.Blog.Web;
 
 namespace MyAbpZeroProject.Web
 {
-    [DependsOn(typeof(MyAbpZeroProjectDataModule), typeof(MyAbpZeroProjectApplicationModule), typeof(MyAbpZeroProjectWebApiModule))]
+    [DependsOn(typeof(MyAbpZeroProjectDataModule), typeof(MyAbpZeroProjectApplicationModule), typeof(MyAbpZeroProjectWebApiModule), typeof(AbpSampleBlogWebModule))]
     public class MyAbpZeroProjectWebModule : AbpModule
     {
         public override void PreInitialize()
