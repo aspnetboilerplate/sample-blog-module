@@ -121,11 +121,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Data\BlogTestDataBuilder.cs" />
-    <Compile Include="Data\DefaultTenantRoleAndUserBuilder.cs" />
     <Compile Include="Posts\PostAppService_Tests.cs" />
     <Compile Include="SampleBlogTestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Data\DefaultTenantRoleAndUserBuilder.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

@@ -1,14 +1,13 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Data.Common;
-using System.Text;
-using System.Threading.Tasks;
 using Abp.Collections;
 using Abp.Modules;
 using Abp.Samples.Blog.EntityFramework;
+using Abp.Samples.Blog.EntityFramework.Migrations.SeedData;
 using Abp.Samples.Blog.Tests.Data;
 using Abp.TestBase;
 using Castle.MicroKernel.Registration;
+using Effort;
 using EntityFramework.DynamicFilters;
 
 namespace Abp.Samples.Blog.Tests
@@ -20,7 +19,7 @@ namespace Abp.Samples.Blog.Tests
             //Fake DbConnection using Effort!
             LocalIocManager.IocContainer.Register(
                 Component.For<DbConnection>()
-                    .UsingFactoryMethod(Effort.DbConnectionFactory.CreateTransient)
+                    .UsingFactoryMethod(DbConnectionFactory.CreateTransient)
                     .LifestyleSingleton()
                 );
 

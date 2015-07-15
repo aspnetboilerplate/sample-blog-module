@@ -15,7 +15,9 @@ namespace Abp.Samples.Blog.Web
         {
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
 
-            DynamicApiControllerBuilder.ForAll<IApplicationService>(typeof (PostAppService).Assembly, "blog");
+            DynamicApiControllerBuilder
+                .ForAll<IApplicationService>(typeof (PostAppService).Assembly, "blog")
+                .Build();
         }
     }
 }

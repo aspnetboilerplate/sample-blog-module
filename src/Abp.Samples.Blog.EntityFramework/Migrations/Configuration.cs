@@ -1,3 +1,6 @@
+using Abp.Samples.Blog.EntityFramework.Migrations.SeedData;
+using EntityFramework.DynamicFilters;
+
 namespace Abp.Samples.Blog.EntityFramework.Migrations
 {
     using System;
@@ -13,20 +16,10 @@ namespace Abp.Samples.Blog.EntityFramework.Migrations
             ContextKey = "AbpSampleBlogModule";
         }
 
-        protected override void Seed(Abp.Samples.Blog.EntityFramework.SampleBlogDbContext context)
+        protected override void Seed(SampleBlogDbContext context)
         {
-            //  This method will be called after migrating to the latest version.
-
-            //  You can use the DbSet<T>.AddOrUpdate() helper extension method 
-            //  to avoid creating duplicate seed data. E.g.
-            //
-            //    context.People.AddOrUpdate(
-            //      p => p.FullName,
-            //      new Person { FullName = "Andrew Peters" },
-            //      new Person { FullName = "Brice Lambson" },
-            //      new Person { FullName = "Rowan Miller" }
-            //    );
-            //
+            context.DisableAllFilters();
+            new BlogTestDataBuilder(context).Build();
         }
     }
 }
