@@ -9,7 +9,7 @@ using Abp.WebApi.Controllers.Dynamic.Builders;
 namespace Abp.Samples.Blog.Web
 {
     [DependsOn(typeof(AbpSampleBlogApplicationModule), typeof(AbpWebApiModule), typeof(AbpWebMvcModule))]
-    public class AbpSampleBlogEntityFrameworkModule : AbpModule
+    public class AbpSampleBlogWebModule : AbpModule
     {
         public override void Initialize()
         {
