@@ -52,17 +52,21 @@
       <HintPath>..\packages\Abp.EntityFramework.0.6.4.1\lib\net451\Abp.EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Samples.Blog.Application">
-      <HintPath>..\..\src\Abp.Samples.Blog.Application\bin\Debug\Abp.Samples.Blog.Application.dll</HintPath>
+    <Reference Include="Abp.Samples.Blog.Application, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Samples.Blog.Application.0.1.0.0\lib\net451\Abp.Samples.Blog.Application.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Samples.Blog.Core">
-      <HintPath>..\..\src\Abp.Samples.Blog.Core\bin\Debug\Abp.Samples.Blog.Core.dll</HintPath>
+    <Reference Include="Abp.Samples.Blog.Core, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Samples.Blog.Core.0.1.0.0\lib\net451\Abp.Samples.Blog.Core.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Samples.Blog.EntityFramework">
-      <HintPath>..\..\src\Abp.Samples.Blog.EntityFramework\bin\Debug\Abp.Samples.Blog.EntityFramework.dll</HintPath>
+    <Reference Include="Abp.Samples.Blog.EntityFramework, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Samples.Blog.EntityFramework.0.1.0.0\lib\net451\Abp.Samples.Blog.EntityFramework.dll</HintPath>
+      <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Samples.Blog.Web">
-      <HintPath>..\..\src\Abp.Samples.Blog.Web\bin\Debug\Abp.Samples.Blog.Web.dll</HintPath>
+    <Reference Include="Abp.Samples.Blog.Web, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Samples.Blog.Web.0.1.0.0\lib\net451\Abp.Samples.Blog.Web.dll</HintPath>
+      <Private>True</Private>
     </Reference>
     <Reference Include="Abp.Web, Version=0.6.4.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -328,6 +332,7 @@
     <Content Include="fonts\fontawesome-webfont.ttf" />
     <Content Include="fonts\fontawesome-webfont.eot" />
     <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="READ_ME.txt" />
     <Content Include="Scripts\angular-animate.js" />
     <Content Include="Scripts\angular-animate.min.js" />
     <Content Include="Scripts\angular-aria.js" />
