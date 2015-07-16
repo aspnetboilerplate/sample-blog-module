@@ -15,7 +15,7 @@ __app__ folder contains an application that installed the blog module. If you ju
 Create an "ABP + module zero" project template from http://www.aspnetboilerplate.com/Templates. If you have a created project, skip this step.
 
 ### Install nuget packages
-Blog module actually consists of 4 sub-module: Core (domain) layer, EntityFramework infrastructure, Application layer and Web (presentation) layer. Install each package to appropriate projects in your solution:
+Blog module actually consists of 4 sub-modules: Core (domain) layer, EntityFramework infrastructure, Application layer and Web (presentation) layer. Install each package to appropriate projects in your solution:
 
 * Abp.Samples.Blog.Core to your .Core project (OPTIONAL).
 * Abp.Samples.Blog.EntityFramework to your .EntityFramework project (OPTIONAL).
@@ -30,7 +30,7 @@ Note: OPTIONAL steps are not required in order to run web application. For examp
 * Add [DependsOn(typeof(AbpSampleBlogEntityFrameworkModule))] for your EntityFramework module/project (OPTIONAL).
 * Add [DependsOn(typeof(AbpSampleBlogWebModule), typeof(AbpSampleBlogEntityFrameworkModule))] for your Web module/project.
 
-Bote: OPTIONAL steps are not required in order to run web application. These dependencies just force initialize orders of modules.
+Note: OPTIONAL steps are not required in order to run web application. These dependencies just force initialize orders of modules.
 
 ### Run migrations
 Run EntityFramework migrations to create database schema for blog module.
