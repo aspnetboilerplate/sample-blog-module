@@ -17,21 +17,25 @@ Create an "ABP + module zero" project template from http://www.aspnetboilerplate
 ### Install nuget packages
 Blog module actually consists of 4 sub-module: Core (domain) layer, EntityFramework infrastructure, Application layer and Web (presentation) layer. Install each package to appropriate projects in your solution:
 
-* Abp.Samples.Blog.Core to your .Core project.
-* Abp.Samples.Blog.EntityFramework to your .EntityFramework project.
-* Abp.Samples.Blog.Application to your application project.
+* Abp.Samples.Blog.Core to your .Core project (OPTIONAL).
+* Abp.Samples.Blog.EntityFramework to your .EntityFramework project (OPTIONAL).
+* Abp.Samples.Blog.Application to your application project (OPTIONAL).
 * All (Abp.Samples.Blog.Core, Abp.Samples.Blog.EntityFramework, Abp.Samples.Blog.Application, Abp.Samples.Blog.Web) to your .Web project.
 
+Note: OPTIONAL steps are not required in order to run web application. For example, you should add Abp.Samples.Blog.Core to your .Core project only if you want to directly use Blog entities in your domain layer.
+
 ### Add module dependencies
-* Add [DependsOn(typeof(AbpSampleBlogCoreModule))] for your Core module/project.
-* Add [DependsOn(typeof(AbpSampleBlogApplicationModule))] for your Application module/project.
-* Add [DependsOn(typeof(AbpSampleBlogEntityFrameworkModule))] for your EntityFramework module/project.
-* Add [DependsOn(typeof(AbpSampleBlogWebModule))] for your Web module/project.
+* Add [DependsOn(typeof(AbpSampleBlogCoreModule))] for your Core module/project (OPTIONAL).
+* Add [DependsOn(typeof(AbpSampleBlogApplicationModule))] for your Application module/project (OPTIONAL).
+* Add [DependsOn(typeof(AbpSampleBlogEntityFrameworkModule))] for your EntityFramework module/project (OPTIONAL).
+* Add [DependsOn(typeof(AbpSampleBlogWebModule), typeof(AbpSampleBlogEntityFrameworkModule))] for your Web module/project.
+
+Bote: OPTIONAL steps are not required in order to run web application. These dependencies just force initialize orders of modules.
 
 ### Run migrations
 Run EntityFramework migrations to create database schema for blog module.
 
-To run migrations from command line, we first create an empty folder, copy all files from "packages\EntityFramework.6.1.3\tools" to this new folder. Also, copy all files from "MyAbpZeroProject.EntityFramework\bin\Debug" (project should be built in Debug once) to this new folder (EF version or project name may be different for your case). Then we can use migrate.exe to update database:
+To run migrations from command line, we first create an empty folder, copy all files from "packages\EntityFramework.6.1.3\tools" to this new folder. Also, copy all files from "MyAbpZeroProject.Web\bin" (project should be built in Debug once) to this new folder (EF version or project name may be different for your case). Then we can use migrate.exe to update database:
 
 <pre>migrate.exe Abp.Samples.Blog.EntityFramework.dll /connectionString="Server=localhost;Database=YOUR_DATABASE;User=sa;Password=YOUR_PASSWORD;" /connectionProviderName="System.Data.SqlClient"</pre>
 
