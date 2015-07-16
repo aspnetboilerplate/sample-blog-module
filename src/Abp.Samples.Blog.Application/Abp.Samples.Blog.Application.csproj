@@ -88,6 +88,7 @@
   <ItemGroup>
     <Compile Include="AbpSampleBlogApplicationModule.cs" />
     <Compile Include="BlogAppServiceBase.cs" />
+    <Compile Include="Posts\Dtos\CreatePostInput.cs" />
     <Compile Include="Posts\Dtos\GetPostsInput.cs" />
     <Compile Include="Posts\IPostAppService.cs" />
     <Compile Include="Posts\PostAppService.cs" />

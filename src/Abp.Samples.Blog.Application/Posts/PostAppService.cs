@@ -1,5 +1,6 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using System.Threading.Tasks;
 using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
 using Abp.Linq.Extensions;
@@ -17,15 +18,20 @@ namespace Abp.Samples.Blog.Posts
             _postRepository = postRepository;
         }
 
-        public PagedResultOutput<PostDto> GetPosts(GetPostsInput input)
+        public async Task<PagedResultOutput<PostDto>> GetPosts(GetPostsInput input)
         {
-            var postCount = _postRepository.Count();
+            var postCount = await _postRepository.CountAsync();
             var posts = _postRepository.GetAll().OrderByDescending(p => p.CreationTime).PageBy(input);
 
             return new PagedResultOutput<PostDto>(
                 postCount,
                 posts.MapTo<List<PostDto>>()
                 );
+        }
+
+        public async Task CreatePost(CreatePostInput input)
+        {
+            await _postRepository.InsertAsync(input.MapTo<Post>());
         }
     }
 }

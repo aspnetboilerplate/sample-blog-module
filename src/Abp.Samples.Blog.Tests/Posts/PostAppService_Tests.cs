@@ -1,4 +1,7 @@
-﻿using Abp.Samples.Blog.Posts;
+﻿using System;
+using System.Linq;
+using System.Threading.Tasks;
+using Abp.Samples.Blog.Posts;
 using Abp.Samples.Blog.Posts.Dtos;
 using Shouldly;
 using Xunit;
@@ -15,11 +18,29 @@ namespace Abp.Samples.Blog.Tests.Posts
         }
 
         [Fact]
-        public void Should_Get_Posts()
+        public async Task Should_Get_Posts()
         {
-            var posts = _postAppService.GetPosts(new GetPostsInput());
+            var posts = await _postAppService.GetPosts(new GetPostsInput());
             posts.TotalCount.ShouldBe(2);
             posts.Items.Count.ShouldBe(2);
+        }
+
+        [Fact]
+        public async Task Should_Insert_Post()
+        {
+            var title = Guid.NewGuid().ToString();
+
+            await _postAppService.CreatePost(
+                new CreatePostInput
+                {
+                    CategoryId = 1,
+                    Content = "a test content",
+                    Title = title,
+                    Status = PostStatus.Draft,
+                    Tags = "test tags"
+                });
+
+            UsingDbContext(context => { context.Posts.FirstOrDefault(p => p.Title == title).ShouldNotBe(null); });
         }
     }
 }
