@@ -1,12 +1,10 @@
 ﻿using System.Reflection;
 using Abp.Modules;
-using Abp.Samples.Blog;
 using Abp.Zero;
 
 namespace MyAbpZeroProject
 {
     [DependsOn(typeof(AbpZeroCoreModule))]
-    [DependsOn(typeof(AbpSampleBlogCoreModule))]
     public class MyAbpZeroProjectCoreModule : AbpModule
     {
         public override void PreInitialize()

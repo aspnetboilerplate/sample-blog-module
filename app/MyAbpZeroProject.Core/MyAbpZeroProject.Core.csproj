@@ -36,10 +36,6 @@
       <HintPath>..\packages\Abp.0.6.4.1\lib\net451\Abp.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Samples.Blog.Core, Version=0.1.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Samples.Blog.Core.0.1.0.0\lib\net451\Abp.Samples.Blog.Core.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Abp.Zero, Version=0.6.4.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.Zero.0.6.4.0\lib\net451\Abp.Zero.dll</HintPath>
       <Private>True</Private>
