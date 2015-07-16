@@ -88,6 +88,12 @@
   <ItemGroup>
     <Compile Include="AbpSampleBlogApplicationModule.cs" />
     <Compile Include="BlogAppServiceBase.cs" />
+    <Compile Include="Categories\CategoryAppService.cs" />
+    <Compile Include="Categories\Dto\CategoryDto.cs" />
+    <Compile Include="Application\Services\CrudAppService.cs" />
+    <Compile Include="Application\Dtos\DefaultPagedResultRequest.cs" />
+    <Compile Include="Categories\ICategoryAppService.cs" />
+    <Compile Include="Application\Services\ICrudAppService.cs" />
     <Compile Include="Posts\Dtos\CreatePostInput.cs" />
     <Compile Include="Posts\Dtos\GetPostsInput.cs" />
     <Compile Include="Posts\IPostAppService.cs" />

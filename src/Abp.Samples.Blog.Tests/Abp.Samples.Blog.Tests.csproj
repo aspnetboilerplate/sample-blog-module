@@ -123,6 +123,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Categories\CategoryAppService_Tests.cs" />
     <Compile Include="Posts\PostAppService_Tests.cs" />
     <Compile Include="SampleBlogTestBase.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
