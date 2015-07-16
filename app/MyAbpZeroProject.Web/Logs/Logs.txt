@@ -263,3 +263,34 @@ System.NotSupportedException: The specified LINQ expression contains references 
    at System.Web.Mvc.Async.AsyncControllerActionInvoker.EndInvokeActionMethodWithFilters(IAsyncResult asyncResult)
    at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<>c__DisplayClass2b.<BeginInvokeAction>b__1c()
    at System.Web.Mvc.Async.AsyncControllerActionInvoker.<>c__DisplayClass21.<BeginInvokeAction>b__1e(IAsyncResult asyncResult)
+DEBUG 2015-07-16 11:37:43,293 [1    ] Abp.Modules.AbpModuleManager             - Loading Abp modules...
+DEBUG 2015-07-16 11:37:44,492 [1    ] Abp.Modules.AbpModuleManager             - Found 17 ABP modules in total.
+DEBUG 2015-07-16 11:37:44,495 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AutoMapper.AbpAutoMapperModule, Abp.AutoMapper, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-16 11:37:44,497 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.AbpKernelModule, Abp, Version=0.6.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-16 11:37:44,497 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.EntityFramework.AbpEntityFrameworkModule, Abp.EntityFramework, Version=0.6.4.1, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-16 11:37:44,497 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Samples.Blog.AbpSampleBlogApplicationModule, Abp.Samples.Blog.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-16 11:37:44,497 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Samples.Blog.AbpSampleBlogCoreModule, Abp.Samples.Blog.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-16 11:37:44,497 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Samples.Blog.EntityFramework.AbpSampleBlogEntityFrameworkModule, Abp.Samples.Blog.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-16 11:37:44,497 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Samples.Blog.Web.AbpSampleBlogWebModule, Abp.Samples.Blog.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-16 11:37:44,497 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.WebApi.AbpWebApiModule, Abp.Web.Api, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-16 11:37:44,497 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.AbpWebModule, Abp.Web, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-16 11:37:44,497 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Web.Mvc.AbpWebMvcModule, Abp.Web.Mvc, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-16 11:37:44,498 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.AbpZeroCoreModule, Abp.Zero, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-16 11:37:44,498 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: Abp.Zero.EntityFramework.AbpZeroEntityFrameworkModule, Abp.Zero.EntityFramework, Version=0.6.4.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-16 11:37:44,498 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyAbpZeroProject.MyAbpZeroProjectApplicationModule, MyAbpZeroProject.Application, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-16 11:37:44,498 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyAbpZeroProject.MyAbpZeroProjectCoreModule, MyAbpZeroProject.Core, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-16 11:37:44,498 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyAbpZeroProject.MyAbpZeroProjectDataModule, MyAbpZeroProject.EntityFramework, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-16 11:37:44,498 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyAbpZeroProject.Web.MyAbpZeroProjectWebModule, MyAbpZeroProject.Web, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-16 11:37:44,498 [1    ] Abp.Modules.AbpModuleManager             - Loaded module: MyAbpZeroProject.MyAbpZeroProjectWebApiModule, MyAbpZeroProject.WebApi, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+DEBUG 2015-07-16 11:37:44,501 [1    ] Abp.Modules.AbpModuleManager             - 17 modules loaded.
+DEBUG 2015-07-16 11:37:45,178 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Found 3 classes defines auto mapping attributes
+DEBUG 2015-07-16 11:37:45,178 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - Abp.Samples.Blog.Posts.Dtos.PostDto
+DEBUG 2015-07-16 11:37:45,308 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyAbpZeroProject.Sessions.Dto.TenantLoginInfoDto
+DEBUG 2015-07-16 11:37:45,314 [1    ] Abp.AutoMapper.AbpAutoMapperModule       - MyAbpZeroProject.Sessions.Dto.UserLoginInfoDto
+DEBUG 2015-07-16 11:37:46,110 [1    ] Default                                  - Dynamic web api controller is created for type 'Abp.Samples.Blog.Posts.IPostAppService' with service name 'blog/post'.
+DEBUG 2015-07-16 11:37:46,116 [1    ] Default                                  - Dynamic web api controller is created for type 'MyAbpZeroProject.Sessions.ISessionAppService' with service name 'app/session'.
+DEBUG 2015-07-16 11:37:46,333 [1    ] Abp.Localization.LocalizationManager     - Initializing 4 localization sources.
+DEBUG 2015-07-16 11:37:46,338 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: Abp
+DEBUG 2015-07-16 11:37:46,338 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpZero
+DEBUG 2015-07-16 11:37:46,341 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: MyAbpZeroProject
+DEBUG 2015-07-16 11:37:46,341 [1    ] Abp.Localization.LocalizationManager     - Initialized localization source: AbpWeb

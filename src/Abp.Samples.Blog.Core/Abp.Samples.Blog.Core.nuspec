@@ -1,0 +1,14 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package>
+  <metadata>
+    <id>Abp.Samples.Blog.Core</id>
+    <version>$version$</version>
+    <title>Abp.Samples.Blog.Core</title>
+    <authors>Halil İbrahim Kalkan</authors>
+    <owners>Halil İbrahim Kalkan</owners>
+    <description>A sample blog module for ASP.NET Boilerplate.</description>
+    <projectUrl>http://www.aspnetboilerplate.com</projectUrl>
+    <iconUrl>http://www.aspnetboilerplate.com/images/abp_nupkg.png</iconUrl>
+    <tags>asp.net boilerplate sample blog module</tags>
+  </metadata>
+</package>
