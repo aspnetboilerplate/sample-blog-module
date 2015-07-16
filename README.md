@@ -9,6 +9,8 @@ A Sample blog module built on ABP and module-zero. __src__ folder contains the s
 
 ## How to install
 
+__app__ folder contains an application that installed the blog module. If you just want to test it, you can download it and skip to "Run migrations" section.
+
 ### Create your project
 Create an "ABP + module zero" project template from http://www.aspnetboilerplate.com/Templates. If you have a created project, skip this step.
 
@@ -27,9 +29,9 @@ Blog module actually consists of 4 sub-module: Core (domain) layer, EntityFramew
 * Add [DependsOn(typeof(AbpSampleBlogWebModule))] for your Web module/project.
 
 ### Run migrations
-Run EntityFramework migrations to create database schema for blog module. This is a little tricky..
+Run EntityFramework migrations to create database schema for blog module.
 
-To run migrations from command line, we first create an empty folder, copy all files from "packages\EntityFramework.6.1.3\tools" to this new folder. Also, copy all files from "MyAbpZeroProject.EntityFramework\bin\Debug" to this new folder (EF version or project name may be different for your case). Then we can use migrate.exe to update database:
+To run migrations from command line, we first create an empty folder, copy all files from "packages\EntityFramework.6.1.3\tools" to this new folder. Also, copy all files from "MyAbpZeroProject.EntityFramework\bin\Debug" (project should be built in Debug once) to this new folder (EF version or project name may be different for your case). Then we can use migrate.exe to update database:
 
 <pre>migrate.exe Abp.Samples.Blog.EntityFramework.dll /connectionString="Server=localhost;Database=YOUR_DATABASE;User=sa;Password=YOUR_PASSWORD;" /connectionProviderName="System.Data.SqlClient"</pre>
 
