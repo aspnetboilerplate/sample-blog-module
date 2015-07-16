@@ -37,7 +37,7 @@ Note that, from now we have 2 different migrations: One for our application and 
 
 ### Run the application
 
-After these steps, we can run the application. After login, we see that a new menu item called 'Blog' added to the main menu. Web can click it to enter admin page for the blog.
+After these steps, we can run the application. After login, we see that a new menu item called 'Blog' added to the main menu. We can click it to enter admin page for the blog.
 
 ### Notes
 This module is developed to be a sample for module development. It's pretty new and there is no much functionality for now.
