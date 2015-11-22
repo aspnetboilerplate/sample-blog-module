@@ -5,10 +5,10 @@ using Abp.Zero.Configuration;
 
 namespace Abp.Samples.Blog.Auth
 {
-    public class RoleManager : AbpRoleManager<BlogTenant, BlogRole, BlogUser>
+    public class BlogRoleManager : AbpRoleManager<BlogTenant, BlogRole, BlogUser>
     {
-        public RoleManager(
-            RoleStore store,
+        public BlogRoleManager(
+            BlogRoleStore store,
             IPermissionManager permissionManager,
             IRoleManagementConfig roleManagementConfig,
             ICacheManager cacheManager)

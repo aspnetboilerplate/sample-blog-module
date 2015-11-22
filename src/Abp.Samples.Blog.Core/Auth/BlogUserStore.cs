@@ -2,17 +2,18 @@
 using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
 using Abp.Runtime.Caching;
+using Abp.Samples.Blog.Domain.Repositories;
 
 namespace Abp.Samples.Blog.Auth
 {
-    public class UserStore : AbpUserStore<BlogTenant, BlogRole, BlogUser>
+    public class BlogUserStore : AbpUserStore<BlogTenant, BlogRole, BlogUser>
     {
-        public UserStore(
-            IRepository<BlogUser, long> userRepository,
-            IRepository<UserLogin, long> userLoginRepository,
-            IRepository<UserRole, long> userRoleRepository,
-            IRepository<BlogRole> roleRepository,
-            IRepository<UserPermissionSetting, long> userPermissionSettingRepository,
+        public BlogUserStore(
+            ISampleBlogRepository<BlogUser, long> userRepository,
+            ISampleBlogRepository<UserLogin, long> userLoginRepository,
+            ISampleBlogRepository<UserRole, long> userRoleRepository,
+            ISampleBlogRepository<BlogRole> roleRepository,
+            ISampleBlogRepository<UserPermissionSetting, long> userPermissionSettingRepository,
             IUnitOfWorkManager unitOfWorkManager,
             ICacheManager cacheManager)
             : base(

@@ -138,6 +138,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BlogTestModule.cs" />
     <Compile Include="Categories\CategoryAppService_Tests.cs" />
     <Compile Include="Posts\PostAppService_Tests.cs" />
     <Compile Include="SampleBlogTestBase.cs" />
@@ -160,6 +161,10 @@
     <ProjectReference Include="..\Abp.Samples.Blog.EntityFramework\Abp.Samples.Blog.EntityFramework.csproj">
       <Project>{737125E6-9615-4734-B6A7-9771843BC2FD}</Project>
       <Name>Abp.Samples.Blog.EntityFramework</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SampleApplication\SampleApplication.csproj">
+      <Project>{2970E429-D662-401E-817B-BD36AF46DE8C}</Project>
+      <Name>SampleApplication</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

@@ -84,22 +84,21 @@
   <ItemGroup>
     <Compile Include="AbpSampleBlogConsts.cs" />
     <Compile Include="AbpSampleBlogCoreModule.cs" />
-    <Compile Include="Editions\EditionManager.cs" />
+    <Compile Include="Editions\BlogEditionManager.cs" />
     <Compile Include="Categories\Category.cs" />
     <Compile Include="Comments\Comment.cs" />
-    <Compile Include="Auth\PermissionChecker.cs" />
     <Compile Include="Domain\Repositories\ISampleBlogRepository.cs" />
     <Compile Include="Posts\Post.cs" />
     <Compile Include="Posts\PostStatus.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Auth\BlogRole.cs" />
-    <Compile Include="Auth\RoleManager.cs" />
-    <Compile Include="Auth\RoleStore.cs" />
+    <Compile Include="Auth\BlogRoleManager.cs" />
+    <Compile Include="Auth\BlogRoleStore.cs" />
     <Compile Include="Auth\BlogTenant.cs" />
-    <Compile Include="Auth\TenantManager.cs" />
+    <Compile Include="Auth\BlogTenantManager.cs" />
     <Compile Include="Auth\BlogUser.cs" />
-    <Compile Include="Auth\UserManager.cs" />
-    <Compile Include="Auth\UserStore.cs" />
+    <Compile Include="Auth\BlogUserManager.cs" />
+    <Compile Include="Auth\BlogUserStore.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Abp.Samples.Blog.Core.nuspec" />

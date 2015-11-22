@@ -40,8 +40,7 @@ namespace Abp.Samples.Blog.Tests
             base.AddModules(modules);
 
             //Adding testing modules. Depended modules of these modules are automatically added.
-            modules.Add<AbpSampleBlogApplicationModule>();
-            modules.Add<AbpSampleBlogEntityFrameworkModule>();
+            modules.Add<BlogTestModule>();
         }
 
         public void UsingDbContext(Action<SampleBlogDbContext> action)
