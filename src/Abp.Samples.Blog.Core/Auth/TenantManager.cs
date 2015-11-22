@@ -1,12 +1,12 @@
-﻿using Abp.Domain.Repositories;
-using Abp.MultiTenancy;
+﻿using Abp.MultiTenancy;
+using Abp.Samples.Blog.Editions;
 
 namespace Abp.Samples.Blog.Auth
 {
     public class TenantManager : AbpTenantManager<BlogTenant, BlogRole, BlogUser>
     {
-        public TenantManager(IRepository<BlogTenant> tenantRepository)
-            : base(tenantRepository)
+        public TenantManager(EditionManager editionManager)
+            : base(editionManager)
         {
 
         }

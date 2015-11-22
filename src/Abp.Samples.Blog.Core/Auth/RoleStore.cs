@@ -1,6 +1,7 @@
 using Abp.Authorization.Roles;
 using Abp.Authorization.Users;
 using Abp.Domain.Repositories;
+using Abp.Runtime.Caching;
 
 namespace Abp.Samples.Blog.Auth
 {
@@ -9,11 +10,13 @@ namespace Abp.Samples.Blog.Auth
         public RoleStore(
             IRepository<BlogRole> roleRepository,
             IRepository<UserRole, long> userRoleRepository,
-            IRepository<RolePermissionSetting, long> rolePermissionSettingRepository)
+            IRepository<RolePermissionSetting, long> rolePermissionSettingRepository,
+            ICacheManager cacheManager)
             : base(
                 roleRepository,
                 userRoleRepository,
-                rolePermissionSettingRepository)
+                rolePermissionSettingRepository,
+                cacheManager)
         {
         }
     }

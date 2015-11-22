@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Data.Common;
 using Abp.Collections;
+using Abp.Domain.Repositories;
 using Abp.Modules;
+using Abp.Samples.Blog.Auth;
 using Abp.Samples.Blog.EntityFramework;
 using Abp.Samples.Blog.EntityFramework.Migrations.SeedData;
 using Abp.Samples.Blog.Tests.Data;
@@ -16,16 +18,21 @@ namespace Abp.Samples.Blog.Tests
     {
         protected SampleBlogTestBase()
         {
+            //Seed initial data
+            UsingDbContext(context => new DefaultTenantRoleAndUserBuilder(context).Build());
+            UsingDbContext(context => new BlogTestDataBuilder(context).Build());
+        }
+
+        protected override void PreInitialize()
+        {
+            base.PreInitialize();
+
             //Fake DbConnection using Effort!
             LocalIocManager.IocContainer.Register(
                 Component.For<DbConnection>()
                     .UsingFactoryMethod(DbConnectionFactory.CreateTransient)
                     .LifestyleSingleton()
                 );
-
-            //Seed initial data
-            UsingDbContext(context => new DefaultTenantRoleAndUserBuilder(context).Build());
-            UsingDbContext(context => new BlogTestDataBuilder(context).Build());
         }
 
         protected override void AddModules(ITypeList<AbpModule> modules)

@@ -5,6 +5,7 @@ using Abp.Configuration.Startup;
 using Abp.Dependency;
 using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
+using Abp.Runtime.Caching;
 using Abp.Zero.Configuration;
 
 namespace Abp.Samples.Blog.Auth
@@ -20,7 +21,8 @@ namespace Abp.Samples.Blog.Auth
             IUnitOfWorkManager unitOfWorkManager,
             ISettingManager settingManager,
             IUserManagementConfig userManagementConfig,
-            IIocResolver iocResolver)
+            IIocResolver iocResolver,
+            ICacheManager cacheManager)
             : base(
                 store,
                 roleManager,
@@ -30,7 +32,8 @@ namespace Abp.Samples.Blog.Auth
                 unitOfWorkManager,
                 settingManager,
                 userManagementConfig,
-                iocResolver)
+                iocResolver,
+                cacheManager)
         {
         }
     }
