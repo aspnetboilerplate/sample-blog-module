@@ -20,9 +20,12 @@ namespace Abp.Samples.Blog.Web
         public override void Initialize()
         {
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
+        }
 
+        public override void PostInitialize()
+        {
             DynamicApiControllerBuilder
-                .ForAll<IApplicationService>(typeof (PostAppService).Assembly, "blog")
+                .ForAll<IApplicationService>(typeof(PostAppService).Assembly, "blog")
                 .Build();
         }
     }

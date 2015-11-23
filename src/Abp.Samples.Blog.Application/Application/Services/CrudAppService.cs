@@ -12,7 +12,7 @@ namespace Abp.Samples.Blog.Application.Services
     //TODO: Auto mappings..?
     //TODO: Select request should be sortable?
 
-    public class CrudAppService<TRepository, TEntity, TEntityDto, TPrimaryKey, TSelectRequestInput, TCreateInput, TUpdateInput>
+    public abstract class CrudAppService<TRepository, TEntity, TEntityDto, TPrimaryKey, TSelectRequestInput, TCreateInput, TUpdateInput>
         : AbpServiceBase, ICrudAppService<TEntityDto, TPrimaryKey, TSelectRequestInput, TCreateInput, TUpdateInput>
         where TSelectRequestInput : IPagedResultRequest
         where TRepository : IRepository<TEntity, TPrimaryKey>
@@ -25,7 +25,7 @@ namespace Abp.Samples.Blog.Application.Services
         {
         }
 
-        public CrudAppService(TRepository repository)
+        protected CrudAppService(TRepository repository)
         {
             Repository = repository;
         }
@@ -67,48 +67,48 @@ namespace Abp.Samples.Blog.Application.Services
         }
     }
 
-    public class CrudAppService<TRepository, TEntity, TEntityDto, TPrimaryKey, TSelectRequestInput>
+    public abstract class CrudAppService<TRepository, TEntity, TEntityDto, TPrimaryKey, TSelectRequestInput>
         : CrudAppService<TRepository, TEntity, TEntityDto, TPrimaryKey, TSelectRequestInput, TEntityDto, TEntityDto>
         where TSelectRequestInput : IPagedResultRequest
         where TRepository : IRepository<TEntity, TPrimaryKey>
         where TEntity : class, IEntity<TPrimaryKey>
         where TEntityDto : EntityRequestInput<TPrimaryKey>
     {
-        public CrudAppService(TRepository repository)
+        protected CrudAppService(TRepository repository)
             : base(repository)
         {
         }
     }
 
-    public class CrudAppService<TRepository, TEntity, TEntityDto, TPrimaryKey>
+    public abstract class CrudAppService<TRepository, TEntity, TEntityDto, TPrimaryKey>
         : CrudAppService<TRepository, TEntity, TEntityDto, TPrimaryKey, DefaultPagedResultRequest>
         where TRepository : IRepository<TEntity, TPrimaryKey>
         where TEntity : class, IEntity<TPrimaryKey>
         where TEntityDto : EntityRequestInput<TPrimaryKey>
     {
-        public CrudAppService(TRepository repository)
+        protected CrudAppService(TRepository repository)
             : base(repository)
         {
         }
     }
 
-    public class CrudAppService<TEntity, TEntityDto, TPrimaryKey>
+    public abstract class CrudAppService<TEntity, TEntityDto, TPrimaryKey>
         : CrudAppService<IRepository<TEntity, TPrimaryKey>, TEntity, TEntityDto, TPrimaryKey>
         where TEntity : class, IEntity<TPrimaryKey>
         where TEntityDto : EntityRequestInput<TPrimaryKey>
     {
-        public CrudAppService(IRepository<TEntity, TPrimaryKey> repository)
+        protected CrudAppService(IRepository<TEntity, TPrimaryKey> repository)
             : base(repository)
         {
         }
     }
 
-    public class CrudAppService<TEntity, TEntityDto>
+    public abstract class CrudAppService<TEntity, TEntityDto>
         : CrudAppService<TEntity, TEntityDto, int>
         where TEntity : class, IEntity<int>
         where TEntityDto : EntityRequestInput<int>
     {
-        public CrudAppService(IRepository<TEntity, int> repository)
+        protected CrudAppService(IRepository<TEntity, int> repository)
             : base(repository)
         {
         }
