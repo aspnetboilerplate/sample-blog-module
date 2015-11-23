@@ -16,7 +16,6 @@ using Abp.Samples.Blog;
 using Abp.Samples.Blog.EntityFramework;
 using Abp.Zero.Configuration;
 using Abp.Zero.EntityFramework;
-using Microsoft.AspNet.Identity;
 
 namespace SampleApplication
 {
@@ -54,16 +53,14 @@ namespace SampleApplication
             IRepository<UserRole, long> userRoleRepository,
             IRepository<Role> roleRepository,
             IRepository<UserPermissionSetting, long> userPermissionSettingRepository,
-            IUnitOfWorkManager unitOfWorkManager,
-            ICacheManager cacheManager)
+            IUnitOfWorkManager unitOfWorkManager)
             : base(
                 userRepository,
                 userLoginRepository,
                 userRoleRepository,
                 roleRepository,
                 userPermissionSettingRepository,
-                unitOfWorkManager,
-                cacheManager)
+                unitOfWorkManager)
         {
 
         }
@@ -103,13 +100,11 @@ namespace SampleApplication
         public RoleStore(
             IRepository<Role> roleRepository,
             IRepository<UserRole, long> userRoleRepository,
-            IRepository<RolePermissionSetting, long> rolePermissionSettingRepository,
-            ICacheManager cacheManager)
+            IRepository<RolePermissionSetting, long> rolePermissionSettingRepository)
             : base(
                 roleRepository,
                 userRoleRepository,
-                rolePermissionSettingRepository,
-                cacheManager)
+                rolePermissionSettingRepository)
         {
         }
     }
@@ -132,8 +127,14 @@ namespace SampleApplication
 
     public class TenantManager : AbpTenantManager<Tenant, Role, User>
     {
-        public TenantManager(EditionManager editionManager) :
-            base(editionManager)
+        public TenantManager(
+            IRepository<Tenant> tenantRepository, 
+            IRepository<TenantFeatureSetting, long> tenantFeatureRepository, 
+            EditionManager editionManager) 
+            : base(
+                tenantRepository, 
+                tenantFeatureRepository, 
+                editionManager)
         {
         }
     }
@@ -149,6 +150,9 @@ namespace SampleApplication
 
     public class EditionManager : AbpEditionManager
     {
+        public EditionManager(IRepository<Edition> editionRepository, IRepository<EditionFeatureSetting, long> editionFeatureRepository) : base(editionRepository, editionFeatureRepository)
+        {
+        }
     }
 
     public class PermissionChecker : PermissionChecker<Tenant, Role, User>

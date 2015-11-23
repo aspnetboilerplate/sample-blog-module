@@ -1,7 +1,5 @@
 ﻿using Abp.Authorization.Users;
-using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
-using Abp.Runtime.Caching;
 using Abp.Samples.Blog.Domain.Repositories;
 
 namespace Abp.Samples.Blog.Auth
@@ -14,16 +12,14 @@ namespace Abp.Samples.Blog.Auth
             ISampleBlogRepository<UserRole, long> userRoleRepository,
             ISampleBlogRepository<BlogRole> roleRepository,
             ISampleBlogRepository<UserPermissionSetting, long> userPermissionSettingRepository,
-            IUnitOfWorkManager unitOfWorkManager,
-            ICacheManager cacheManager)
+            IUnitOfWorkManager unitOfWorkManager)
             : base(
                 userRepository,
                 userLoginRepository,
                 userRoleRepository,
                 roleRepository,
                 userPermissionSettingRepository,
-                unitOfWorkManager, 
-                cacheManager)
+                unitOfWorkManager)
         {
         }
     }
