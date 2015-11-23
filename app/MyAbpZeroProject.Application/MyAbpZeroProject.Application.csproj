@@ -40,12 +40,12 @@
       <HintPath>..\packages\Abp.AutoMapper.0.7.4.1\lib\net451\Abp.AutoMapper.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Samples.Blog.Application, Version=0.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Samples.Blog.Application.0.2.0.0\lib\net451\Abp.Samples.Blog.Application.dll</HintPath>
+    <Reference Include="Abp.Samples.Blog.Application, Version=0.2.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Samples.Blog.Application.0.2.0.3\lib\net451\Abp.Samples.Blog.Application.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Samples.Blog.Core, Version=0.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Samples.Blog.Core.0.2.0.0\lib\net451\Abp.Samples.Blog.Core.dll</HintPath>
+    <Reference Include="Abp.Samples.Blog.Core, Version=0.2.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Samples.Blog.Core.0.2.0.3\lib\net451\Abp.Samples.Blog.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Abp.Zero, Version=0.7.4.1, Culture=neutral, processorArchitecture=MSIL">

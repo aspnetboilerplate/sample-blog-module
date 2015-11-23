@@ -52,20 +52,20 @@
       <HintPath>..\packages\Abp.EntityFramework.0.7.4.1\lib\net451\Abp.EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Samples.Blog.Application, Version=0.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Samples.Blog.Application.0.2.0.0\lib\net451\Abp.Samples.Blog.Application.dll</HintPath>
+    <Reference Include="Abp.Samples.Blog.Application, Version=0.2.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Samples.Blog.Application.0.2.0.3\lib\net451\Abp.Samples.Blog.Application.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Samples.Blog.Core, Version=0.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Samples.Blog.Core.0.2.0.0\lib\net451\Abp.Samples.Blog.Core.dll</HintPath>
+    <Reference Include="Abp.Samples.Blog.Core, Version=0.2.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Samples.Blog.Core.0.2.0.3\lib\net451\Abp.Samples.Blog.Core.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Samples.Blog.EntityFramework, Version=0.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Samples.Blog.EntityFramework.0.2.0.0\lib\net451\Abp.Samples.Blog.EntityFramework.dll</HintPath>
+    <Reference Include="Abp.Samples.Blog.EntityFramework, Version=0.2.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Samples.Blog.EntityFramework.0.2.0.3\lib\net451\Abp.Samples.Blog.EntityFramework.dll</HintPath>
       <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Samples.Blog.Web, Version=0.2.0.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Samples.Blog.Web.0.2.0.0\lib\net451\Abp.Samples.Blog.Web.dll</HintPath>
+    <Reference Include="Abp.Samples.Blog.Web, Version=0.2.0.3, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Samples.Blog.Web.0.2.0.3\lib\net451\Abp.Samples.Blog.Web.dll</HintPath>
       <Private>True</Private>
     </Reference>
     <Reference Include="Abp.Web, Version=0.7.4.1, Culture=neutral, processorArchitecture=MSIL">
@@ -396,10 +396,10 @@
     <Content Include="Scripts\angular-aria.min.js.map" />
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular.min.js.map" />
-    <Content Include="App\Main\views\blog\blog.cshtml" />
     <Content Include="Abp\Framework\styles\abp.mixings.less" />
     <Content Include="Abp\Framework\styles\abp.less" />
     <Content Include="Abp\Framework\styles\abp.css.map" />
+    <Content Include="App\Main\views\blog\blog.cshtml" />
     <None Include="Scripts\jquery-2.1.4.intellisense.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
@@ -1252,7 +1252,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>6234</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:6234/</IISUrl>
+          <IISUrl>http://localhost:6217/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

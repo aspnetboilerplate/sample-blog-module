@@ -14,7 +14,7 @@ namespace MyAbpZeroProject.Web
     [DependsOn(
         typeof(MyAbpZeroProjectDataModule), 
         typeof(MyAbpZeroProjectApplicationModule), 
-        typeof(MyAbpZeroProjectWebApiModule), 
+        typeof(MyAbpZeroProjectWebApiModule),
         typeof(AbpSampleBlogWebModule),
         typeof(AbpSampleBlogEntityFrameworkModule)
         )]
