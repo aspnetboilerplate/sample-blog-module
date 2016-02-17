@@ -118,6 +118,10 @@
     <Compile Include="Migrations\201511230918198_Upgrade_ModuleZero_0_7_4_1.Designer.cs">
       <DependentUpon>201511230918198_Upgrade_ModuleZero_0_7_4_1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201602171451570_Upgraded_To_Module_Zero_0_8.cs" />
+    <Compile Include="Migrations\201602171451570_Upgraded_To_Module_Zero_0_8.Designer.cs">
+      <DependentUpon>201602171451570_Upgraded_To_Module_Zero_0_8.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\SeedData\BlogTestDataBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -143,6 +147,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201511230918198_Upgrade_ModuleZero_0_7_4_1.resx">
       <DependentUpon>201511230918198_Upgrade_ModuleZero_0_7_4_1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201602171451570_Upgraded_To_Module_Zero_0_8.resx">
+      <DependentUpon>201602171451570_Upgraded_To_Module_Zero_0_8.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
