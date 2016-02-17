@@ -2,6 +2,6 @@
 {
     public class AbpSampleBlogConsts
     {
-        public const string Version = "0.2.0.3";
+        public const string Version = "0.3.0.0";
     }
 }
