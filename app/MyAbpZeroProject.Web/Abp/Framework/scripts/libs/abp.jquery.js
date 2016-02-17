@@ -46,7 +46,7 @@
             if (error.details) {
                 return abp.message.error(error.details, error.message);
             } else {
-                return abp.message.error(error.message);
+                return abp.message.error(error.message || abp.ajax.defaultError.message);
             }
         },
 
@@ -94,7 +94,7 @@
                     if (data.unAuthorizedRequest) {
                         abp.ajax.handleUnAuthorizedRequest(messagePromise, data.targetUrl);
                     }
-                } else { //not abp-related data!
+                } else { //not wrapped result
                     $dfd && $dfd.resolve(data);
                     userOptions.success && userOptions.success(data);
                 }

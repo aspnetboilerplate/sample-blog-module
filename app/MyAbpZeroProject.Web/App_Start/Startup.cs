@@ -1,4 +1,5 @@
-﻿using MyAbpZeroProject.Web;
+﻿using Abp.Owin;
+using MyAbpZeroProject.Web;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin;
 using Microsoft.Owin.Security.Cookies;
@@ -12,6 +13,8 @@ namespace MyAbpZeroProject.Web
     {
         public void Configuration(IAppBuilder app)
         {
+            app.UseAbp();
+
             // Enable the application to use a cookie to store information for the signed in user
             app.UseCookieAuthentication(new CookieAuthenticationOptions
             {

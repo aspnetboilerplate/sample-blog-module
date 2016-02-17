@@ -18,9 +18,9 @@
 
         showError: function (error) {
             if (error.details) {
-                return abp.message.error(error.details, error.message);
+                return abp.message.error(error.details, error.message || abp.ng.http.defaultError.message);
             } else {
-                return abp.message.error(error.message);
+                return abp.message.error(error.message || abp.ng.http.defaultError.message);
             }
         },
 
@@ -56,7 +56,7 @@
                 if (originalData.targetUrl) {
                     abp.ng.http.handleTargetUrl(originalData.targetUrl);
                 }
-            } else if(originalData.success === false) {
+            } else if (originalData.success === false) {
                 var messagePromise = null;
 
                 if (originalData.error) {
@@ -73,6 +73,8 @@
                 if (originalData.unAuthorizedRequest) {
                     abp.ng.http.handleUnAuthorizedRequest(messagePromise, originalData.targetUrl);
                 }
+            } else { //not wrapped result
+                defer.resolve(response);
             }
         }
     }
@@ -107,8 +109,8 @@
 
                     'responseError': function (ngError) {
                         var error = {
-                            message: ngError.data,
-                            details: ngError.statusText,
+                            message: ngError.data || abp.ng.http.defaultError.message,
+                            details: ngError.statusText || abp.ng.http.defaultError.details,
                             responseError: true
                         }
 
