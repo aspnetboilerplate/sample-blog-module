@@ -11,6 +11,7 @@ using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
 using Abp.Modules;
 using Abp.MultiTenancy;
+using Abp.Organizations;
 using Abp.Runtime.Caching;
 using Abp.Samples.Blog;
 using Abp.Samples.Blog.EntityFramework;
@@ -78,7 +79,10 @@ namespace SampleApplication
             ISettingManager settingManager,
             IUserManagementConfig userManagementConfig,
             IIocResolver iocResolver,
-            ICacheManager cacheManager
+            ICacheManager cacheManager,
+            IRepository<OrganizationUnit, long> organizationUnitRepository,
+            IRepository<UserOrganizationUnit, long> userOrganizationUnitRepository,
+            IOrganizationUnitSettings organizationUnitSettings
             )
             : base(
             userStore,
@@ -90,7 +94,10 @@ namespace SampleApplication
             settingManager,
             userManagementConfig,
             iocResolver,
-            cacheManager)
+            cacheManager,
+            organizationUnitRepository,
+            userOrganizationUnitRepository,
+            organizationUnitSettings)
         {
         }
     }

@@ -3,7 +3,9 @@ using Abp.Authorization.Users;
 using Abp.Configuration;
 using Abp.Configuration.Startup;
 using Abp.Dependency;
+using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
+using Abp.Organizations;
 using Abp.Runtime.Caching;
 using Abp.Samples.Blog.Domain.Repositories;
 using Abp.Zero.Configuration;
@@ -22,7 +24,10 @@ namespace Abp.Samples.Blog.Auth
             ISettingManager settingManager,
             IUserManagementConfig userManagementConfig,
             IIocResolver iocResolver,
-            ICacheManager cacheManager)
+            ICacheManager cacheManager,
+            IRepository<OrganizationUnit, long> organizationUnitRepository,
+            IRepository<UserOrganizationUnit, long> userOrganizationUnitRepository,
+            IOrganizationUnitSettings organizationUnitSettings)
             : base(
                 store,
                 blogRoleManager,
@@ -33,7 +38,10 @@ namespace Abp.Samples.Blog.Auth
                 settingManager,
                 userManagementConfig,
                 iocResolver,
-                cacheManager)
+                cacheManager,
+                organizationUnitRepository,
+                userOrganizationUnitRepository,
+                organizationUnitSettings)
         {
         }
     }
