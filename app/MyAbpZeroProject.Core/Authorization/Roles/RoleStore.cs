@@ -1,12 +1,11 @@
 using Abp.Authorization.Roles;
 using Abp.Authorization.Users;
 using Abp.Domain.Repositories;
-using MyAbpZeroProject.MultiTenancy;
 using MyAbpZeroProject.Users;
 
 namespace MyAbpZeroProject.Authorization.Roles
 {
-    public class RoleStore : AbpRoleStore<Tenant, Role, User>
+    public class RoleStore : AbpRoleStore<Role, User>
     {
         public RoleStore(
             IRepository<Role> roleRepository,

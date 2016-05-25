@@ -28,7 +28,8 @@ namespace MyAbpZeroProject.Users
             ICacheManager cacheManager,
             IRepository<OrganizationUnit, long> organizationUnitRepository,
             IRepository<UserOrganizationUnit, long> userOrganizationUnitRepository,
-            IOrganizationUnitSettings organizationUnitSettings)
+            IOrganizationUnitSettings organizationUnitSettings,
+            IRepository<UserLoginAttempt, long> userLoginAttempyRepository)
             : base(
                 store,
                 roleManager,
@@ -42,7 +43,8 @@ namespace MyAbpZeroProject.Users
                 cacheManager,
                 organizationUnitRepository,
                 userOrganizationUnitRepository,
-                organizationUnitSettings
+                organizationUnitSettings,
+                userLoginAttempyRepository
             )
         {
         }
