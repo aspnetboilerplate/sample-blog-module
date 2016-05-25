@@ -104,6 +104,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Migrations\201605251608407_Upgraded_To_Module_Zero_0_9_1_1.cs" />
+    <Compile Include="Migrations\201605251608407_Upgraded_To_Module_Zero_0_9_1_1.Designer.cs">
+      <DependentUpon>201605251608407_Upgraded_To_Module_Zero_0_9_1_1.cs</DependentUpon>
+    </Compile>
     <Compile Include="SampleBlogDbContext.cs" />
     <Compile Include="AbpSampleBlogEntityFrameworkModule.cs" />
     <Compile Include="Migrations\201507141034315_Added_Initial_Blog_Entities.cs" />
@@ -150,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201602171451570_Upgraded_To_Module_Zero_0_8.resx">
       <DependentUpon>201602171451570_Upgraded_To_Module_Zero_0_8.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201605251608407_Upgraded_To_Module_Zero_0_9_1_1.resx">
+      <DependentUpon>201605251608407_Upgraded_To_Module_Zero_0_9_1_1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
