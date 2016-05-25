@@ -4,7 +4,7 @@ using Abp.Samples.Blog.Domain.Repositories;
 
 namespace Abp.Samples.Blog.Auth
 {
-    public class BlogUserStore : AbpUserStore<BlogTenant, BlogRole, BlogUser>
+    public class BlogUserStore : AbpUserStore<BlogRole, BlogUser>
     {
         public BlogUserStore(
             ISampleBlogRepository<BlogUser, long> userRepository,

@@ -49,7 +49,7 @@ namespace Abp.Samples.Blog.Tests.Data
 
                 _context.SaveChanges();
 
-                _context.UserRoles.Add(new UserRole(adminUserForTenancyOwner.Id, adminRoleForTenancyOwner.Id));
+                _context.UserRoles.Add(new UserRole(null, adminUserForTenancyOwner.Id, adminRoleForTenancyOwner.Id));
 
                 _context.SaveChanges();
             }
@@ -90,7 +90,7 @@ namespace Abp.Samples.Blog.Tests.Data
                     });
                 _context.SaveChanges();
 
-                _context.UserRoles.Add(new UserRole(adminUserForDefaultTenant.Id, adminRoleForDefaultTenant.Id));
+                _context.UserRoles.Add(new UserRole(defaultTenant.Id, adminUserForDefaultTenant.Id, adminRoleForDefaultTenant.Id));
                 _context.SaveChanges();
             }
         }

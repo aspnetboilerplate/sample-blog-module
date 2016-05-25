@@ -2,7 +2,7 @@
 
 namespace Abp.Samples.Blog.Auth
 {
-    public class BlogRole : AbpRole<BlogTenant, BlogUser>
+    public class BlogRole : AbpRole<BlogUser>
     {
 
     }

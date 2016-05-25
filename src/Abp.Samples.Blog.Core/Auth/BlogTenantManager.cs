@@ -1,4 +1,5 @@
-﻿using Abp.MultiTenancy;
+﻿using Abp.Application.Features;
+using Abp.MultiTenancy;
 using Abp.Samples.Blog.Domain.Repositories;
 using Abp.Samples.Blog.Editions;
 
@@ -9,11 +10,13 @@ namespace Abp.Samples.Blog.Auth
         public BlogTenantManager(
             ISampleBlogRepository<BlogTenant> tenantRepository, 
             ISampleBlogRepository<TenantFeatureSetting, long> tenantFeatureRepository, 
-            BlogEditionManager editionManager)
+            BlogEditionManager editionManager,
+            IAbpZeroFeatureValueStore featureValueStore)
             : base(
                 tenantRepository, 
                 tenantFeatureRepository, 
-                editionManager)
+                editionManager,
+                featureValueStore)
         {
         }
     }

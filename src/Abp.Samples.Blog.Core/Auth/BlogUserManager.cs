@@ -27,7 +27,8 @@ namespace Abp.Samples.Blog.Auth
             ICacheManager cacheManager,
             IRepository<OrganizationUnit, long> organizationUnitRepository,
             IRepository<UserOrganizationUnit, long> userOrganizationUnitRepository,
-            IOrganizationUnitSettings organizationUnitSettings)
+            IOrganizationUnitSettings organizationUnitSettings,
+            IRepository<UserLoginAttempt, long> userLoginAttemptRepository)
             : base(
                 store,
                 blogRoleManager,
@@ -41,7 +42,8 @@ namespace Abp.Samples.Blog.Auth
                 cacheManager,
                 organizationUnitRepository,
                 userOrganizationUnitRepository,
-                organizationUnitSettings)
+                organizationUnitSettings,
+                userLoginAttemptRepository)
         {
         }
     }

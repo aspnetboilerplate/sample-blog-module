@@ -8,10 +8,10 @@ namespace Abp.Samples.Blog.Editions
     {
         public BlogEditionManager(
             ISampleBlogRepository<Edition> editionRepository,
-            ISampleBlogRepository<EditionFeatureSetting, long> editionFeatureRepository)
+            IAbpZeroFeatureValueStore featureValueStore)
             : base(
                 editionRepository,
-                editionFeatureRepository)
+                featureValueStore)
         {
         }
     }

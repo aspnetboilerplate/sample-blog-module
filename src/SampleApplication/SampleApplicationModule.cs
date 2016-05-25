@@ -1,4 +1,5 @@
-﻿using System.Reflection;
+﻿using System.Data.Common;
+using System.Reflection;
 using Abp.Application.Editions;
 using Abp.Application.Features;
 using Abp.Authorization;
@@ -25,28 +26,35 @@ namespace SampleApplication
         typeof(AbpSampleBlogEntityFrameworkModule))]
     public class SampleApplicationModule : AbpModule
     {
+        public override void PreInitialize()
+        {
+            Configuration.Modules.Zero().EntityTypes.Tenant = typeof (Tenant);
+            Configuration.Modules.Zero().EntityTypes.User = typeof (User);
+            Configuration.Modules.Zero().EntityTypes.Role = typeof (Role);
+        }
+
         public override void Initialize()
         {
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
         }
     }
 
-    public class User : AbpUser<Tenant, User>
+    public class User : AbpUser<User>
     {
 
     }
 
-    public class Role : AbpRole<Tenant, User>
+    public class Role : AbpRole<User>
     {
 
     }
 
-    public class Tenant : AbpTenant<Tenant, User>
+    public class Tenant : AbpTenant<User>
     {
 
     }
 
-    public class UserStore : AbpUserStore<Tenant, Role, User>
+    public class UserStore : AbpUserStore<Role, User>
     {
         public UserStore(
             IRepository<User, long> userRepository,
@@ -82,7 +90,8 @@ namespace SampleApplication
             ICacheManager cacheManager,
             IRepository<OrganizationUnit, long> organizationUnitRepository,
             IRepository<UserOrganizationUnit, long> userOrganizationUnitRepository,
-            IOrganizationUnitSettings organizationUnitSettings
+            IOrganizationUnitSettings organizationUnitSettings,
+            IRepository<UserLoginAttempt, long> userLoginAttemptRepository 
             )
             : base(
             userStore,
@@ -97,12 +106,13 @@ namespace SampleApplication
             cacheManager,
             organizationUnitRepository,
             userOrganizationUnitRepository,
-            organizationUnitSettings)
+            organizationUnitSettings,
+            userLoginAttemptRepository)
         {
         }
     }
 
-    public class RoleStore : AbpRoleStore<Tenant, Role, User>
+    public class RoleStore : AbpRoleStore<Role, User>
     {
         public RoleStore(
             IRepository<Role> roleRepository,
@@ -116,18 +126,20 @@ namespace SampleApplication
         }
     }
 
-    public class RoleManager : AbpRoleManager<Tenant, Role, User>
+    public class RoleManager : AbpRoleManager<Role, User>
     {
         public RoleManager(
             RoleStore store,
             IPermissionManager permissionManager,
             IRoleManagementConfig roleManagementConfig,
-            ICacheManager cacheManager)
+            ICacheManager cacheManager,
+            IUnitOfWorkManager unitOfWorkManager)
             : base(
             store,
             permissionManager,
             roleManagementConfig,
-            cacheManager)
+            cacheManager,
+            unitOfWorkManager)
         {
         }
     }
@@ -137,19 +149,34 @@ namespace SampleApplication
         public TenantManager(
             IRepository<Tenant> tenantRepository, 
             IRepository<TenantFeatureSetting, long> tenantFeatureRepository, 
-            EditionManager editionManager) 
+            EditionManager editionManager,
+            IAbpZeroFeatureValueStore featureValueStore) 
             : base(
                 tenantRepository, 
                 tenantFeatureRepository, 
-                editionManager)
+                editionManager,
+                featureValueStore)
         {
         }
     }
 
     public class FeatureValueStore : AbpFeatureValueStore<Tenant, Role, User>
     {
-        public FeatureValueStore(TenantManager tenantManager)
-            : base(tenantManager)
+        public FeatureValueStore(
+            ICacheManager cacheManager,
+            IRepository<TenantFeatureSetting, long> tenantFeatureRepository,
+            IRepository<Tenant> tenantRepository,
+            IRepository<EditionFeatureSetting, long> editionFeatureRepository,
+            IFeatureManager featureManager,
+            IUnitOfWorkManager unitOfWorkManager)
+            : base(
+                  cacheManager,
+                  tenantFeatureRepository,
+                  tenantRepository,
+                  editionFeatureRepository,
+                  featureManager,
+                  unitOfWorkManager
+                  )
         {
 
         }
@@ -157,7 +184,12 @@ namespace SampleApplication
 
     public class EditionManager : AbpEditionManager
     {
-        public EditionManager(IRepository<Edition> editionRepository, IRepository<EditionFeatureSetting, long> editionFeatureRepository) : base(editionRepository, editionFeatureRepository)
+        public EditionManager(
+            IRepository<Edition> editionRepository,
+            IAbpZeroFeatureValueStore featureValueStore) 
+            : base(
+                  editionRepository,
+                  featureValueStore)
         {
         }
     }
@@ -173,6 +205,32 @@ namespace SampleApplication
 
     public class SampleApplicationDbContext : AbpZeroDbContext<Tenant, Role, User>
     {
-        //...
+        /* NOTE: 
+        *   Setting "Default" to base class helps us when working migration commands on Package Manager Console.
+        *   But it may cause problems when working Migrate.exe of EF. If you will apply migrations on command line, do not
+        *   pass connection string name to base classes. ABP works either way.
+        */
+        public SampleApplicationDbContext()
+            : base("Default")
+        {
+
+        }
+
+        /* NOTE:
+         *   This constructor is used by ABP to pass connection string defined in AbpProjectNameDataModule.PreInitialize.
+         *   Notice that, actually you will not directly create an instance of AbpProjectNameDbContext since ABP automatically handles it.
+         */
+        public SampleApplicationDbContext(string nameOrConnectionString)
+            : base(nameOrConnectionString)
+        {
+
+        }
+
+        //This constructor is used in tests
+        public SampleApplicationDbContext(DbConnection connection)
+            : base(connection, true)
+        {
+
+        }
     }
 }
