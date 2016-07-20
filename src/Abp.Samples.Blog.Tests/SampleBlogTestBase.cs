@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Data.Common;
-using Abp.Collections;
-using Abp.Domain.Repositories;
-using Abp.Modules;
-using Abp.Samples.Blog.Auth;
 using Abp.Samples.Blog.EntityFramework;
 using Abp.Samples.Blog.EntityFramework.Migrations.SeedData;
 using Abp.Samples.Blog.Tests.Data;
@@ -14,7 +10,7 @@ using EntityFramework.DynamicFilters;
 
 namespace Abp.Samples.Blog.Tests
 {
-    public abstract class SampleBlogTestBase : AbpIntegratedTestBase
+    public abstract class SampleBlogTestBase : AbpIntegratedTestBase<BlogTestModule>
     {
         protected SampleBlogTestBase()
         {
@@ -33,14 +29,6 @@ namespace Abp.Samples.Blog.Tests
                     .UsingFactoryMethod(DbConnectionFactory.CreateTransient)
                     .LifestyleSingleton()
                 );
-        }
-
-        protected override void AddModules(ITypeList<AbpModule> modules)
-        {
-            base.AddModules(modules);
-
-            //Adding testing modules. Depended modules of these modules are automatically added.
-            modules.Add<BlogTestModule>();
         }
 
         public void UsingDbContext(Action<SampleBlogDbContext> action)

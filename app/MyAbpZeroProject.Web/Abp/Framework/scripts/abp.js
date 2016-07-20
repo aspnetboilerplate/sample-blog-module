@@ -495,9 +495,19 @@
         return root;
     };
 
+    /* Find and replaces a string (search) to another string (replacement) in
+    *  given string (str).
+    *  Example:
+    *  abp.utils.replaceAll('This is a test string', 'is', 'X') = 'ThX X a test string'
+    ************************************************************/
+    abp.utils.replaceAll = function (str, search, replacement) {
+        var fix = search.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        return str.replace(new RegExp(fix, 'g'), replacement);
+    };
+    
     /* Formats a string just like string.format in C#.
     *  Example:
-    *  _formatString('Hello {0}','Halil') = 'Hello Halil'
+    *  abp.utils.formatString('Hello {0}','Tuana') = 'Hello Tuana'
     ************************************************************/
     abp.utils.formatString = function () {
         if (arguments.length < 1) {
@@ -508,7 +518,7 @@
 
         for (var i = 1; i < arguments.length; i++) {
             var placeHolder = '{' + (i - 1) + '}';
-            str = str.replace(placeHolder, arguments[i]);
+            str = abp.utils.replaceAll(str, placeHolder, arguments[i]);
         }
 
         return str;
@@ -641,6 +651,24 @@
         };
     })();
 
+    abp.timing.unspecifiedClockProvider = (function () {
+
+        var now = function () {
+            return new Date();
+        }
+
+        var normalize = function (date) {
+            return date;
+        }
+
+        // Public interface ///////////////////////////////////////////////////
+
+        return {
+            now: now,
+            normalize: normalize
+        };
+    })();
+
     abp.timing.convertToUserTimezone = function (date) {
         var localTime = date.getTime();
         var utcTime = localTime + (date.getTimezoneOffset() * 60000);
@@ -667,6 +695,6 @@
         return date;
     }
 
-    abp.clock.provider = abp.timing.localClockProvider;
+    abp.clock.provider = abp.timing.unspecifiedClockProvider;
 
 })(jQuery);

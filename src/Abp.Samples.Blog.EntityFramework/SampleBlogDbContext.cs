@@ -1,6 +1,6 @@
 ﻿using System.Data.Common;
 using System.Data.Entity;
-using Abp.EntityFramework.Repositories;
+using Abp.EntityFramework;
 using Abp.Samples.Blog.Auth;
 using Abp.Samples.Blog.Categories;
 using Abp.Samples.Blog.Comments;

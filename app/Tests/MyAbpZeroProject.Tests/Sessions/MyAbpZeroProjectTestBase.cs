@@ -3,9 +3,7 @@ using System.Data.Common;
 using System.Data.Entity;
 using System.Linq;
 using System.Threading.Tasks;
-using Abp.Collections;
 using Abp.Configuration.Startup;
-using Abp.Modules;
 using Abp.Runtime.Session;
 using Abp.TestBase;
 using MyAbpZeroProject.EntityFramework;
@@ -17,7 +15,7 @@ using EntityFramework.DynamicFilters;
 
 namespace MyAbpZeroProject.Tests.Sessions
 {
-    public abstract class MyAbpZeroProjectTestBase : AbpIntegratedTestBase
+    public abstract class MyAbpZeroProjectTestBase : AbpIntegratedTestBase<MyAbpZeroProjectTestModule>
     {
         protected MyAbpZeroProjectTestBase()
         {
@@ -32,15 +30,6 @@ namespace MyAbpZeroProject.Tests.Sessions
             UsingDbContext(context => new InitialDataBuilder(context).Build());
 
             LoginAsDefaultTenantAdmin();
-        }
-
-        protected override void AddModules(ITypeList<AbpModule> modules)
-        {
-            base.AddModules(modules);
-
-            //Adding testing modules. Depended modules of these modules are automatically added.
-            modules.Add<MyAbpZeroProjectApplicationModule>();
-            modules.Add<MyAbpZeroProjectDataModule>();
         }
 
         public void UsingDbContext(Action<MyAbpZeroProjectDbContext> action)

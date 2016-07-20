@@ -8,6 +8,7 @@ using Abp.Localization.Sources.Xml;
 using Abp.Modules;
 using Abp.Samples.Blog.EntityFramework;
 using Abp.Samples.Blog.Web;
+using Abp.Web.Mvc;
 
 namespace MyAbpZeroProject.Web
 {
@@ -16,7 +17,8 @@ namespace MyAbpZeroProject.Web
         typeof(MyAbpZeroProjectApplicationModule), 
         typeof(MyAbpZeroProjectWebApiModule),
         typeof(AbpSampleBlogWebModule),
-        typeof(AbpSampleBlogEntityFrameworkModule)
+        typeof(AbpSampleBlogEntityFrameworkModule),
+        typeof(AbpWebMvcModule)
         )]
     public class MyAbpZeroProjectWebModule : AbpModule
     {
