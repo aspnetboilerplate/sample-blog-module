@@ -21,7 +21,7 @@
 
             postService.getPosts({
                 maxResultCount: 1000
-            }).success(function(result) {
+            }).then(function(result) {
                 vm.posts = result.items;
             });
         }

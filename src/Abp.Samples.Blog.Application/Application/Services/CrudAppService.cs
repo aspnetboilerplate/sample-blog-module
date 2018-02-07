@@ -17,7 +17,7 @@ namespace Abp.Samples.Blog.Application.Services
         where TSelectRequestInput : IPagedResultRequest
         where TRepository : IRepository<TEntity, TPrimaryKey>
         where TEntity : class, IEntity<TPrimaryKey>
-        where TUpdateInput : EntityRequestInput<TPrimaryKey>
+        where TUpdateInput : EntityDto<TPrimaryKey>
     {
         protected readonly TRepository Repository;
 
@@ -30,16 +30,16 @@ namespace Abp.Samples.Blog.Application.Services
             Repository = repository;
         }
 
-        public TEntityDto Get(IdInput<TPrimaryKey> input)
+        public TEntityDto Get(EntityDto<TPrimaryKey> input)
         {
             return Repository.Get(input.Id).MapTo<TEntityDto>();
         }
 
-        public virtual PagedResultOutput<TEntityDto> GetAll(TSelectRequestInput input)
+        public virtual PagedResultDto<TEntityDto> GetAll(TSelectRequestInput input)
         {
             var query = CreateQueryable(input);
 
-            return new PagedResultOutput<TEntityDto>(
+            return new PagedResultDto<TEntityDto>(
                 query.Count(),
                 CreateQueryable(input).OrderByDescending(e => e.Id).PageBy(input).MapTo<List<TEntityDto>>()
                 );
@@ -56,7 +56,7 @@ namespace Abp.Samples.Blog.Application.Services
             input.MapTo(entity);
         }
 
-        public virtual void Delete(IdInput<TPrimaryKey> input)
+        public virtual void Delete(EntityDto<TPrimaryKey> input)
         {
             Repository.Delete(input.Id);
         }
@@ -72,7 +72,7 @@ namespace Abp.Samples.Blog.Application.Services
         where TSelectRequestInput : IPagedResultRequest
         where TRepository : IRepository<TEntity, TPrimaryKey>
         where TEntity : class, IEntity<TPrimaryKey>
-        where TEntityDto : EntityRequestInput<TPrimaryKey>
+        where TEntityDto : EntityDto<TPrimaryKey>
     {
         protected CrudAppService(TRepository repository)
             : base(repository)
@@ -84,7 +84,7 @@ namespace Abp.Samples.Blog.Application.Services
         : CrudAppService<TRepository, TEntity, TEntityDto, TPrimaryKey, DefaultPagedResultRequest>
         where TRepository : IRepository<TEntity, TPrimaryKey>
         where TEntity : class, IEntity<TPrimaryKey>
-        where TEntityDto : EntityRequestInput<TPrimaryKey>
+        where TEntityDto : EntityDto<TPrimaryKey>
     {
         protected CrudAppService(TRepository repository)
             : base(repository)
@@ -95,7 +95,7 @@ namespace Abp.Samples.Blog.Application.Services
     public abstract class CrudAppService<TEntity, TEntityDto, TPrimaryKey>
         : CrudAppService<IRepository<TEntity, TPrimaryKey>, TEntity, TEntityDto, TPrimaryKey>
         where TEntity : class, IEntity<TPrimaryKey>
-        where TEntityDto : EntityRequestInput<TPrimaryKey>
+        where TEntityDto : EntityDto<TPrimaryKey>
     {
         protected CrudAppService(IRepository<TEntity, TPrimaryKey> repository)
             : base(repository)
@@ -106,7 +106,7 @@ namespace Abp.Samples.Blog.Application.Services
     public abstract class CrudAppService<TEntity, TEntityDto>
         : CrudAppService<TEntity, TEntityDto, int>
         where TEntity : class, IEntity<int>
-        where TEntityDto : EntityRequestInput<int>
+        where TEntityDto : EntityDto<int>
     {
         protected CrudAppService(IRepository<TEntity, int> repository)
             : base(repository)

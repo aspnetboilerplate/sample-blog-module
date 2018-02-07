@@ -8,15 +8,15 @@ namespace Abp.Samples.Blog.Application.Services
         : IApplicationService
         where TSelectRequestInput : IPagedResultRequest
     {
-        TEntityDto Get(IdInput<TPrimaryKey> input);
+        TEntityDto Get(EntityDto<TPrimaryKey> input);
 
-        PagedResultOutput<TEntityDto> GetAll(TSelectRequestInput input);
+        PagedResultDto<TEntityDto> GetAll(TSelectRequestInput input);
 
         TPrimaryKey Create(TCreateInput input);
 
         void Update(TUpdateInput input);
 
-        void Delete(IdInput<TPrimaryKey> input);
+        void Delete(EntityDto<TPrimaryKey> input);
     }
 
     public interface ICrudAppService<TEntityDto, TPrimaryKey, in TSelectRequestInput>

@@ -12,14 +12,16 @@ namespace Abp.Samples.Blog.Auth
             ISampleBlogRepository<UserRole, long> userRoleRepository,
             ISampleBlogRepository<BlogRole> roleRepository,
             ISampleBlogRepository<UserPermissionSetting, long> userPermissionSettingRepository,
-            IUnitOfWorkManager unitOfWorkManager)
+            IUnitOfWorkManager unitOfWorkManager,
+            ISampleBlogRepository<UserClaim, long> userCliamRepository)
             : base(
                 userRepository,
                 userLoginRepository,
                 userRoleRepository,
                 roleRepository,
                 userPermissionSettingRepository,
-                unitOfWorkManager)
+                unitOfWorkManager,
+                userCliamRepository)
         {
         }
     }

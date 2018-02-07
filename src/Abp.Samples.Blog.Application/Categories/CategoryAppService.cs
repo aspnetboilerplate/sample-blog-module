@@ -1,4 +1,5 @@
 ﻿using Abp.Samples.Blog.Application.Services;
+using Abp.Samples.Blog.Categories.Dto;
 using Abp.Samples.Blog.Domain.Repositories;
 
 namespace Abp.Samples.Blog.Categories

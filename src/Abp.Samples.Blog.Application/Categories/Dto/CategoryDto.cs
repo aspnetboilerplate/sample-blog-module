@@ -2,10 +2,10 @@
 using Abp.Application.Services.Dto;
 using Abp.AutoMapper;
 
-namespace Abp.Samples.Blog.Categories
+namespace Abp.Samples.Blog.Categories.Dto
 {
     [AutoMap(typeof(Category))]
-    public class CategoryDto : EntityRequestInput
+    public class CategoryDto : EntityDto
     {
         [Required]
         [StringLength(Category.MaxNameLength)]

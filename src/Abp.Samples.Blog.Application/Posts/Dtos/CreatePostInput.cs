@@ -5,7 +5,7 @@ using Abp.AutoMapper;
 namespace Abp.Samples.Blog.Posts.Dtos
 {
     [AutoMapTo(typeof(Post))]
-    public class CreatePostInput : IInputDto
+    public class CreatePostInput
     {
         [Range(1, int.MaxValue)]
         public int CategoryId { get; set; }

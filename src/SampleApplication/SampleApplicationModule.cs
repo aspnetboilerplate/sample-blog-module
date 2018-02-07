@@ -10,6 +10,8 @@ using Abp.Configuration.Startup;
 using Abp.Dependency;
 using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
+using Abp.IdentityFramework;
+using Abp.Localization;
 using Abp.Modules;
 using Abp.MultiTenancy;
 using Abp.Organizations;
@@ -62,52 +64,49 @@ namespace SampleApplication
             IRepository<UserRole, long> userRoleRepository,
             IRepository<Role> roleRepository,
             IRepository<UserPermissionSetting, long> userPermissionSettingRepository,
-            IUnitOfWorkManager unitOfWorkManager)
+            IUnitOfWorkManager unitOfWorkManager,
+            IRepository<UserClaim, long> userCliamRepository
+        )
             : base(
                 userRepository,
                 userLoginRepository,
                 userRoleRepository,
                 roleRepository,
                 userPermissionSettingRepository,
-                unitOfWorkManager)
+                unitOfWorkManager,
+                userCliamRepository)
         {
-
         }
     }
 
-    public class UserManager : AbpUserManager<Tenant, Role, User>
+    public class UserManager : AbpUserManager<Role, User>
     {
         public UserManager(
             UserStore userStore,
             RoleManager roleManager,
-            IRepository<Tenant> tenantRepository,
-            IMultiTenancyConfig multiTenancyConfig,
             IPermissionManager permissionManager,
             IUnitOfWorkManager unitOfWorkManager,
-            ISettingManager settingManager,
-            IUserManagementConfig userManagementConfig,
-            IIocResolver iocResolver,
             ICacheManager cacheManager,
             IRepository<OrganizationUnit, long> organizationUnitRepository,
             IRepository<UserOrganizationUnit, long> userOrganizationUnitRepository,
             IOrganizationUnitSettings organizationUnitSettings,
-            IRepository<UserLoginAttempt, long> userLoginAttemptRepository 
-            )
+            IdentityEmailMessageService emailService,
+            ILocalizationManager localizationManager,
+            ISettingManager settingManager,
+            IUserTokenProviderAccessor userTokenProviderAccessor)
             : base(
-            userStore,
-            roleManager,
-            tenantRepository,
-            multiTenancyConfig,
-            permissionManager,
-            unitOfWorkManager,
-            settingManager,
-            userManagementConfig,
-            iocResolver,
-            cacheManager,
-            organizationUnitRepository,
-            userOrganizationUnitRepository,
-            organizationUnitSettings,
-            userLoginAttemptRepository)
+                userStore,
+                roleManager,
+                permissionManager,
+                unitOfWorkManager,
+                cacheManager,
+                organizationUnitRepository,
+                userOrganizationUnitRepository,
+                organizationUnitSettings,
+                localizationManager,
+                emailService,
+                settingManager,
+                userTokenProviderAccessor)
         {
         }
     }
@@ -144,7 +143,7 @@ namespace SampleApplication
         }
     }
 
-    public class TenantManager : AbpTenantManager<Tenant, Role, User>
+    public class TenantManager : AbpTenantManager<Tenant, User>
     {
         public TenantManager(
             IRepository<Tenant> tenantRepository, 
@@ -160,7 +159,7 @@ namespace SampleApplication
         }
     }
 
-    public class FeatureValueStore : AbpFeatureValueStore<Tenant, Role, User>
+    public class FeatureValueStore : AbpFeatureValueStore<Tenant, User>
     {
         public FeatureValueStore(
             ICacheManager cacheManager,
@@ -194,7 +193,7 @@ namespace SampleApplication
         }
     }
 
-    public class PermissionChecker : PermissionChecker<Tenant, Role, User>
+    public class PermissionChecker : PermissionChecker<Role, User>
     {
         public PermissionChecker(UserManager userManager)
             : base(userManager)

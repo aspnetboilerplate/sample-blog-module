@@ -5,7 +5,7 @@ using Abp.Samples.Blog.Editions;
 
 namespace Abp.Samples.Blog.Auth
 {
-    public class BlogTenantManager : AbpTenantManager<BlogTenant, BlogRole, BlogUser>
+    public class BlogTenantManager : AbpTenantManager<BlogTenant, BlogUser>
     {
         public BlogTenantManager(
             ISampleBlogRepository<BlogTenant> tenantRepository, 

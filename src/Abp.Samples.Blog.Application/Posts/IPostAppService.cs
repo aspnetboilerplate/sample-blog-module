@@ -7,7 +7,7 @@ namespace Abp.Samples.Blog.Posts
 {
     public interface IPostAppService : IApplicationService
     {
-        Task<PagedResultOutput<PostDto>> GetPosts(GetPostsInput input);
+        Task<PagedResultDto<PostDto>> GetPosts(GetPostsInput input);
 
         Task CreatePost(CreatePostInput input);
     }
