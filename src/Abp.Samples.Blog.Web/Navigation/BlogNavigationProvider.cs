@@ -7,13 +7,14 @@ namespace Abp.Samples.Blog.Web.Navigation
     {
         public override void SetNavigation(INavigationProviderContext context)
         {
-            context.Manager.MainMenu.Items.Add(
-                new MenuItemDefinition(
-                    "SampleBlog.AdminPage",
-                    new FixedLocalizableString("Blog"),
-                    url: "#/blog",
-                    icon: "fa fa-list"
-                    )
+            context.Manager.MainMenu
+                .AddItem(
+                    new MenuItemDefinition(
+                        "SampleBlog.AdminPage",
+                        new FixedLocalizableString("Blog"),
+                        url: "#/blog",
+                        icon: "fa fa-list"
+                        )
                 );
         }
     }
