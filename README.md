@@ -47,3 +47,5 @@ After these steps, we can run the application. After login, we see that a new me
 
 ### Notes
 This module is developed to be a sample for module development. It's pretty new and there is no much functionality for now.
+
+If you are using ABP's ASP.NET MVC 5.x & AngularJs template, then you need to add a new menu item for the blog in "**sidebar-nav.js**" because menu items are defined in client side for ASP.NET MVC 5.x & AngularJs template.
