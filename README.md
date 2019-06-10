@@ -1,3 +1,7 @@
+# Important
+
+Issues of this repository are tracked on https://github.com/aspnetboilerplate/aspnetboilerplate. Please create your issues on https://github.com/aspnetboilerplate/aspnetboilerplate/issues.
+
 # sample-blog-module
 A Sample blog module built on ABP and module-zero. __src__ folder contains the sample blog module. __app__ folder contains an application uses the blog module.
 
