@@ -1,13 +1,19 @@
-﻿<div ng-controller="app.views.blog as vm">
-    <h1>Blog Posts</h1>
-    <div class="row">
-        <div class="col-md-12">
-            <ul class="list-group">
-                <li class="list-group-item" ng-repeat="post in vm.posts">
-                    <h4>{{post.title}}</h4>
-                    <p>{{post.content}}</p>
-                </li>
-            </ul>
+﻿<div class="row clearfix" ng-controller="app.views.blog as vm">
+    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="card main-content">
+            <div class="header">
+                <h2>
+                    Blog Posts
+                </h2>
+            </div>
+            <div class="body table-responsive">
+                <ul class="list-group">
+                    <li class="list-group-item" ng-repeat="post in vm.posts">
+                        <h4>{{post.title}}</h4>
+                        <p>{{post.content}}</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </div>
 </div>

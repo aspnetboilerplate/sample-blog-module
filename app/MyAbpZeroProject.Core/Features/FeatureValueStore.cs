@@ -9,7 +9,7 @@ using MyAbpZeroProject.Users;
 
 namespace MyAbpZeroProject.Features
 {
-    public class FeatureValueStore : AbpFeatureValueStore<Tenant, Role,User>
+    public class FeatureValueStore : AbpFeatureValueStore<Tenant, User>
     {
         public FeatureValueStore(
             ICacheManager cacheManager,

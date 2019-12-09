@@ -1,5 +1,7 @@
 ﻿using Abp.Authorization.Users;
+using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
+using Abp.Organizations;
 using Abp.Samples.Blog.Domain.Repositories;
 
 namespace Abp.Samples.Blog.Auth
@@ -13,15 +15,10 @@ namespace Abp.Samples.Blog.Auth
             ISampleBlogRepository<BlogRole> roleRepository,
             ISampleBlogRepository<UserPermissionSetting, long> userPermissionSettingRepository,
             IUnitOfWorkManager unitOfWorkManager,
-            ISampleBlogRepository<UserClaim, long> userCliamRepository)
-            : base(
-                userRepository,
-                userLoginRepository,
-                userRoleRepository,
-                roleRepository,
-                userPermissionSettingRepository,
-                unitOfWorkManager,
-                userCliamRepository)
+            ISampleBlogRepository<UserClaim, long> userClaimRepository,
+            ISampleBlogRepository<UserOrganizationUnit, long> userOrganizationUnitRepository,
+            ISampleBlogRepository<OrganizationUnitRole, long> organizationUnitRoleRepository)
+            : base(userRepository, userLoginRepository, userRoleRepository, roleRepository, userPermissionSettingRepository, unitOfWorkManager, userClaimRepository, userOrganizationUnitRepository, organizationUnitRoleRepository)
         {
         }
     }

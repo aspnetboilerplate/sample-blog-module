@@ -1,4 +1,4 @@
-﻿(function() {
+﻿(function () {
 
     angular.module('app').config([
         '$stateProvider',
@@ -21,8 +21,8 @@
 
             postService.getPosts({
                 maxResultCount: 1000
-            }).success(function(result) {
-                vm.posts = result.items;
+            }).then(function (result) {
+                vm.posts = result.data.items;
             });
         }
     ]);

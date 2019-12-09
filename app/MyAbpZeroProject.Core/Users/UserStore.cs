@@ -1,6 +1,7 @@
 using Abp.Authorization.Users;
 using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
+using Abp.Organizations;
 using MyAbpZeroProject.Authorization.Roles;
 
 namespace MyAbpZeroProject.Users
@@ -13,14 +14,11 @@ namespace MyAbpZeroProject.Users
             IRepository<UserRole, long> userRoleRepository,
             IRepository<Role> roleRepository,
             IRepository<UserPermissionSetting, long> userPermissionSettingRepository,
-            IUnitOfWorkManager unitOfWorkManager)
-            : base(
-                userRepository,
-                userLoginRepository,
-                userRoleRepository,
-                roleRepository,
-                userPermissionSettingRepository,
-                unitOfWorkManager)
+            IUnitOfWorkManager unitOfWorkManager,
+            IRepository<UserClaim, long> userClaimRepository,
+            IRepository<UserOrganizationUnit, long> userOrganizationUnitRepository,
+            IRepository<OrganizationUnitRole, long> organizationUnitRoleRepository)
+            : base(userRepository, userLoginRepository, userRoleRepository, roleRepository, userPermissionSettingRepository, unitOfWorkManager, userClaimRepository, userOrganizationUnitRepository, organizationUnitRoleRepository)
         {
         }
     }

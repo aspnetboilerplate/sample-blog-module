@@ -12,10 +12,10 @@ namespace MyAbpZeroProject
         public override void Initialize()
         {
             IocManager.RegisterAssemblyByConvention(Assembly.GetExecutingAssembly());
-
-            DynamicApiControllerBuilder
-                .ForAll<IApplicationService>(typeof(MyAbpZeroProjectApplicationModule).Assembly, "app")
-                .Build();
+            ////////TODO: Fix it
+            ////////DynamicApiControllerBuilder
+            ////////    .ForAll<IApplicationService>(typeof(MyAbpZeroProjectApplicationModule).Assembly, "app")
+            ////////    .Build();
         }
     }
 }
