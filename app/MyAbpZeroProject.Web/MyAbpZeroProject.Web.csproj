@@ -48,24 +48,20 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Abp">
+    <Reference Include="Abp, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.5.0.0\lib\netstandard2.0\Abp.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.AutoMapper, Version=4.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Abp.AutoMapper, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.AutoMapper.5.0.0\lib\netstandard2.0\Abp.AutoMapper.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.EntityFramework, Version=4.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Abp.EntityFramework, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.EntityFramework.5.0.0\lib\net461\Abp.EntityFramework.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.EntityFramework.Common, Version=4.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Abp.EntityFramework.Common, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.EntityFramework.Common.5.0.0\lib\netstandard2.0\Abp.EntityFramework.Common.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Owin, Version=4.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Abp.Owin, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.Owin.5.0.0\lib\net461\Abp.Owin.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Abp.Samples.Blog.Application, Version=0.6.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.Samples.Blog.Application.0.6.3\lib\net461\Abp.Samples.Blog.Application.dll</HintPath>
@@ -79,32 +75,26 @@
     <Reference Include="Abp.Samples.Blog.Web, Version=0.6.3.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.Samples.Blog.Web.0.6.3\lib\net461\Abp.Samples.Blog.Web.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.Web, Version=4.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Abp.Web, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.Web.5.0.0\lib\net461\Abp.Web.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Web.Api, Version=4.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Abp.Web.Api, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.Web.Api.5.0.0\lib\net461\Abp.Web.Api.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Web.Common, Version=4.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Abp.Web.Common, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.Web.Common.5.0.0\lib\netstandard2.0\Abp.Web.Common.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Web.Mvc, Version=4.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Abp.Web.Mvc, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.Web.Mvc.5.0.0\lib\net461\Abp.Web.Mvc.dll</HintPath>
-      <Private>True</Private>
     </Reference>
-    <Reference Include="Abp.Zero, Version=4.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Abp.Zero, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.Zero.5.0.0\lib\net461\Abp.Zero.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Abp.Zero.Common, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.Zero.Common.5.0.0\lib\netstandard2.0\Abp.Zero.Common.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.Zero.EntityFramework, Version=4.11.0.0, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Abp.Zero.EntityFramework, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.Zero.EntityFramework.5.0.0\lib\net461\Abp.Zero.EntityFramework.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Antlr3.Runtime">
       <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
@@ -197,23 +187,11 @@
     <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <HintPath>..\packages\Newtonsoft.Json.12.0.3\lib\net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
-    <Reference Include="Nito.AsyncEx, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Nito.AsyncEx.3.0.1\lib\net45\Nito.AsyncEx.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
-    <Reference Include="Nito.AsyncEx.Concurrent, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Nito.AsyncEx.3.0.1\lib\net45\Nito.AsyncEx.Concurrent.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="Nito.AsyncEx.Context, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nito.AsyncEx.Context.5.0.0\lib\netstandard2.0\Nito.AsyncEx.Context.dll</HintPath>
     </Reference>
     <Reference Include="Nito.AsyncEx.Coordination, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nito.AsyncEx.Coordination.5.0.0\lib\netstandard2.0\Nito.AsyncEx.Coordination.dll</HintPath>
-    </Reference>
-    <Reference Include="Nito.AsyncEx.Enlightenment, Version=3.0.1.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Nito.AsyncEx.3.0.1\lib\net45\Nito.AsyncEx.Enlightenment.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="Nito.AsyncEx.Interop.WaitHandles, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Nito.AsyncEx.Interop.WaitHandles.5.0.0\lib\netstandard2.0\Nito.AsyncEx.Interop.WaitHandles.dll</HintPath>
