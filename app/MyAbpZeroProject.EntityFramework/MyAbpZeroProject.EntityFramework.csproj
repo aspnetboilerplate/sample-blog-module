@@ -223,21 +223,9 @@
   <ItemGroup>
     <Compile Include="EntityFramework\MyAbpZeroProjectDbContext.cs" />
     <Compile Include="EntityFramework\Repositories\MyAbpZeroProjectRepositoryBase.cs" />
-    <Compile Include="Migrations\201506210746108_AbpZero_Initial.cs" />
-    <Compile Include="Migrations\201506210746108_AbpZero_Initial.Designer.cs">
-      <DependentUpon>201506210746108_AbpZero_Initial.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511230830394_Upgrade_To_ModuleZero_0_7_4_1.cs" />
-    <Compile Include="Migrations\201511230830394_Upgrade_To_ModuleZero_0_7_4_1.Designer.cs">
-      <DependentUpon>201511230830394_Upgrade_To_ModuleZero_0_7_4_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201602171437452_Upgrade_To_Abp_v0_8.cs" />
-    <Compile Include="Migrations\201602171437452_Upgrade_To_Abp_v0_8.Designer.cs">
-      <DependentUpon>201602171437452_Upgrade_To_Abp_v0_8.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201605251556115_Upgraded_To_ModuleZero_0_9_1_1.cs" />
-    <Compile Include="Migrations\201605251556115_Upgraded_To_ModuleZero_0_9_1_1.Designer.cs">
-      <DependentUpon>201605251556115_Upgraded_To_ModuleZero_0_9_1_1.cs</DependentUpon>
+    <Compile Include="Migrations\201912091516151_Upgraded_To_Abp_5_1_0.cs" />
+    <Compile Include="Migrations\201912091516151_Upgraded_To_Abp_5_1_0.designer.cs">
+      <DependentUpon>201912091516151_Upgraded_To_Abp_5_1_0.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="MyAbpZeroProjectDataModule.cs" />
@@ -256,21 +244,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201506210746108_AbpZero_Initial.resx">
-      <DependentUpon>201506210746108_AbpZero_Initial.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511230830394_Upgrade_To_ModuleZero_0_7_4_1.resx">
-      <DependentUpon>201511230830394_Upgrade_To_ModuleZero_0_7_4_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602171437452_Upgrade_To_Abp_v0_8.resx">
-      <DependentUpon>201602171437452_Upgrade_To_Abp_v0_8.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605251556115_Upgraded_To_ModuleZero_0_9_1_1.resx">
-      <DependentUpon>201605251556115_Upgraded_To_ModuleZero_0_9_1_1.cs</DependentUpon>
-    </EmbeddedResource>
+    <Content Include="READ_ME.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="READ_ME.txt" />
+    <EmbeddedResource Include="Migrations\201912091516151_Upgraded_To_Abp_5_1_0.resx">
+      <DependentUpon>201912091516151_Upgraded_To_Abp_5_1_0.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />

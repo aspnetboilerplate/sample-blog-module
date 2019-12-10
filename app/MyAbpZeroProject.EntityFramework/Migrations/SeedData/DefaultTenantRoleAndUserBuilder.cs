@@ -44,7 +44,9 @@ namespace MyAbpZeroProject.Migrations.SeedData
                         UserName = "admin",
                         Name = "System",
                         Surname = "Administrator",
+                        NormalizedUserName = "ADMIN",
                         EmailAddress = "admin@aspnetboilerplate.com",
+                        NormalizedEmailAddress = "ADMIN@ASPNETBOILERPLATE.COM",
                         IsEmailConfirmed = true,
                         Password = "AM4OLBpptxBYmM79lGOX9egzZk3vIQU3d/gFCJzaBjAPXzYIK3tQ2N7X4fcrHtElTw==" //123qwe
                     });
@@ -86,7 +88,9 @@ namespace MyAbpZeroProject.Migrations.SeedData
                         UserName = "admin",
                         Name = "System",
                         Surname = "Administrator",
+                        NormalizedUserName = "ADMIN",
                         EmailAddress = "admin@aspnetboilerplate.com",
+                        NormalizedEmailAddress = "ADMIN@ASPNETBOILERPLATE.COM",
                         IsEmailConfirmed = true,
                         Password = "AM4OLBpptxBYmM79lGOX9egzZk3vIQU3d/gFCJzaBjAPXzYIK3tQ2N7X4fcrHtElTw==" //123qwe
                     });
