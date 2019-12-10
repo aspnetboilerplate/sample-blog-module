@@ -66,8 +66,8 @@
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.DynamicFilters, Version=3.1.1.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
-      <HintPath>..\packages\EntityFramework.DynamicFilters.3.1.1\lib\net40\EntityFramework.DynamicFilters.dll</HintPath>
+    <Reference Include="EntityFramework.DynamicFilters, Version=3.1.0.0, Culture=neutral, PublicKeyToken=59b66d028979105b, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.DynamicFilters.3.1.0\lib\net40\EntityFramework.DynamicFilters.dll</HintPath>
     </Reference>
     <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <HintPath>..\packages\EntityFramework.6.4.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
@@ -216,32 +216,12 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Migrations\201605251608407_Upgraded_To_Module_Zero_0_9_1_1.cs" />
-    <Compile Include="Migrations\201605251608407_Upgraded_To_Module_Zero_0_9_1_1.Designer.cs">
-      <DependentUpon>201605251608407_Upgraded_To_Module_Zero_0_9_1_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201802061405552_Upgraded_To_ABP_3_4.cs" />
-    <Compile Include="Migrations\201802061405552_Upgraded_To_ABP_3_4.Designer.cs">
-      <DependentUpon>201802061405552_Upgraded_To_ABP_3_4.cs</DependentUpon>
+    <Compile Include="Migrations\201912100827426_Ugraded_To_Abp_5_1_0.cs" />
+    <Compile Include="Migrations\201912100827426_Ugraded_To_Abp_5_1_0.designer.cs">
+      <DependentUpon>201912100827426_Ugraded_To_Abp_5_1_0.cs</DependentUpon>
     </Compile>
     <Compile Include="SampleBlogDbContext.cs" />
     <Compile Include="AbpSampleBlogEntityFrameworkModule.cs" />
-    <Compile Include="Migrations\201507141034315_Added_Initial_Blog_Entities.cs" />
-    <Compile Include="Migrations\201507141034315_Added_Initial_Blog_Entities.Designer.cs">
-      <DependentUpon>201507141034315_Added_Initial_Blog_Entities.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201507141104288_Renamed_Tables.cs" />
-    <Compile Include="Migrations\201507141104288_Renamed_Tables.Designer.cs">
-      <DependentUpon>201507141104288_Renamed_Tables.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201511230918198_Upgrade_ModuleZero_0_7_4_1.cs" />
-    <Compile Include="Migrations\201511230918198_Upgrade_ModuleZero_0_7_4_1.Designer.cs">
-      <DependentUpon>201511230918198_Upgrade_ModuleZero_0_7_4_1.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\201602171451570_Upgraded_To_Module_Zero_0_8.cs" />
-    <Compile Include="Migrations\201602171451570_Upgraded_To_Module_Zero_0_8.Designer.cs">
-      <DependentUpon>201602171451570_Upgraded_To_Module_Zero_0_8.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Migrations\SeedData\BlogTestDataBuilder.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -259,27 +239,12 @@
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201507141034315_Added_Initial_Blog_Entities.resx">
-      <DependentUpon>201507141034315_Added_Initial_Blog_Entities.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201507141104288_Renamed_Tables.resx">
-      <DependentUpon>201507141104288_Renamed_Tables.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201511230918198_Upgrade_ModuleZero_0_7_4_1.resx">
-      <DependentUpon>201511230918198_Upgrade_ModuleZero_0_7_4_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201602171451570_Upgraded_To_Module_Zero_0_8.resx">
-      <DependentUpon>201602171451570_Upgraded_To_Module_Zero_0_8.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201605251608407_Upgraded_To_Module_Zero_0_9_1_1.resx">
-      <DependentUpon>201605251608407_Upgraded_To_Module_Zero_0_9_1_1.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201802061405552_Upgraded_To_ABP_3_4.resx">
-      <DependentUpon>201802061405552_Upgraded_To_ABP_3_4.cs</DependentUpon>
-    </EmbeddedResource>
+    <Content Include="READ_ME.txt" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="READ_ME.txt" />
+    <EmbeddedResource Include="Migrations\201912100827426_Ugraded_To_Abp_5_1_0.resx">
+      <DependentUpon>201912100827426_Ugraded_To_Abp_5_1_0.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
