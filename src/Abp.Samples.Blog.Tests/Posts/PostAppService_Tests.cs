@@ -26,6 +26,17 @@ namespace Abp.Samples.Blog.Tests.Posts
         }
 
         [Fact]
+        public async Task Should_Get_Posts_With_Parameter()
+        {
+            var posts = await _postAppService.GetPosts(new GetPostsInput()
+            {
+                MaxResultCount = 1000
+            });
+            posts.TotalCount.ShouldBe(2);
+            posts.Items.Count.ShouldBe(2);
+        }
+
+        [Fact]
         public async Task Should_Insert_Post()
         {
             var title = Guid.NewGuid().ToString();

@@ -63,17 +63,17 @@
     <Reference Include="Abp.Owin, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.Owin.5.0.0\lib\net461\Abp.Owin.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.Samples.Blog.Application, Version=0.6.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Samples.Blog.Application.0.6.3\lib\net461\Abp.Samples.Blog.Application.dll</HintPath>
+    <Reference Include="Abp.Samples.Blog.Application, Version=0.7.0-preview1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Samples.Blog.Application.0.7.0-preview1\lib\net461\Abp.Samples.Blog.Application.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.Samples.Blog.Core, Version=0.6.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Samples.Blog.Core.0.6.3\lib\net461\Abp.Samples.Blog.Core.dll</HintPath>
+    <Reference Include="Abp.Samples.Blog.Core, Version=0.7.0-preview1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Samples.Blog.Core.0.7.0-preview1\lib\net461\Abp.Samples.Blog.Core.dll</HintPath>
     </Reference>
-    <Reference Include="Abp.Samples.Blog.EntityFramework, Version=0.6.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Samples.Blog.EntityFramework.0.6.3\lib\net461\Abp.Samples.Blog.EntityFramework.dll</HintPath>
+    <Reference Include="Abp.Samples.Blog.EntityFramework, Version=0.7.0-preview1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\Abp.Samples.Blog.EntityFramework.0.7.0-preview1\lib\net461\Abp.Samples.Blog.EntityFramework.dll</HintPath>
     </Reference>
     <Reference Include="Abp.Samples.Blog.Web, Version=0.6.3.0, Culture=neutral, processorArchitecture=MSIL">
-      <HintPath>..\packages\Abp.Samples.Blog.Web.0.6.3\lib\net461\Abp.Samples.Blog.Web.dll</HintPath>
+      <HintPath>..\packages\Abp.Samples.Blog.Web.0.7.0-preview1\lib\net461\Abp.Samples.Blog.Web.dll</HintPath>
     </Reference>
     <Reference Include="Abp.Web, Version=5.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <HintPath>..\packages\Abp.Web.5.0.0\lib\net461\Abp.Web.dll</HintPath>
