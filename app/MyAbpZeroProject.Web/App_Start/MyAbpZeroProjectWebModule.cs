@@ -4,8 +4,10 @@ using System.Web.Mvc;
 using System.Web.Optimization;
 using System.Web.Routing;
 using Abp.Localization;
-using Abp.Localization.Sources.Xml;
+using Abp.Localization.Dictionaries;
+using Abp.Localization.Dictionaries.Xml;
 using Abp.Modules;
+using Abp.Reflection.Extensions;
 using Abp.Samples.Blog.EntityFramework;
 using Abp.Samples.Blog.Web;
 using Abp.Web.Mvc;
@@ -13,8 +15,8 @@ using Abp.Web.Mvc;
 namespace MyAbpZeroProject.Web
 {
     [DependsOn(
-        typeof(MyAbpZeroProjectDataModule), 
-        typeof(MyAbpZeroProjectApplicationModule), 
+        typeof(MyAbpZeroProjectDataModule),
+        typeof(MyAbpZeroProjectApplicationModule),
         typeof(MyAbpZeroProjectWebApiModule),
         typeof(AbpSampleBlogWebModule),
         typeof(AbpSampleBlogEntityFrameworkModule),
@@ -31,11 +33,13 @@ namespace MyAbpZeroProject.Web
 
             //Add/remove localization sources here
             Configuration.Localization.Sources.Add(
-                new XmlLocalizationSource(
+                new DictionaryBasedLocalizationSource(
                     MyAbpZeroProjectConsts.LocalizationSourceName,
-                    HttpContext.Current.Server.MapPath("~/Localization/MyAbpZeroProject")
+                    new XmlEmbeddedFileLocalizationDictionaryProvider(
+                        typeof(MyAbpZeroProjectWebModule).GetAssembly(),
+                        HttpContext.Current.Server.MapPath("~/Localization/MyAbpZeroProject")
                     )
-                );
+                ));
 
             //Configure navigation/menu
             Configuration.Navigation.Providers.Add<MyAbpZeroProjectNavigationProvider>();

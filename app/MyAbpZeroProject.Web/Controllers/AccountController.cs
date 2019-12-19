@@ -2,20 +2,24 @@
 using System.Web;
 using System.Web.Mvc;
 using Abp.Auditing;
+using Abp.Authorization;
 using Abp.Authorization.Users;
 using Abp.Configuration.Startup;
 using Abp.UI;
+using Abp.Web.Models;
 using Abp.Web.Mvc.Models;
 using MyAbpZeroProject.Users;
 using MyAbpZeroProject.Web.Models.Account;
 using Microsoft.AspNet.Identity;
 using Microsoft.Owin.Security;
+using MyAbpZeroProject.Authorization;
 
 namespace MyAbpZeroProject.Web.Controllers
 {
     public class AccountController : MyAbpZeroProjectControllerBase
     {
         private readonly UserManager _userManager;
+        private readonly LogInManager _logInManager;
         private readonly IMultiTenancyConfig _multiTenancyConfig;
 
         private IAuthenticationManager AuthenticationManager
@@ -26,9 +30,13 @@ namespace MyAbpZeroProject.Web.Controllers
             }
         }
 
-        public AccountController(UserManager userManager, IMultiTenancyConfig multiTenancyConfig)
+        public AccountController(
+            UserManager userManager,
+            LogInManager logInManager,
+            IMultiTenancyConfig multiTenancyConfig)
         {
             _userManager = userManager;
+            _logInManager = logInManager;
             _multiTenancyConfig = multiTenancyConfig;
         }
 
@@ -56,7 +64,7 @@ namespace MyAbpZeroProject.Web.Controllers
                 throw new UserFriendlyException("Your form is invalid!");
             }
 
-            var loginResult = await _userManager.LoginAsync(
+            var loginResult = await _logInManager.LoginAsync(
                 loginModel.UsernameOrEmailAddress,
                 loginModel.Password,
                 loginModel.TenancyName
@@ -89,7 +97,7 @@ namespace MyAbpZeroProject.Web.Controllers
                 returnUrl = Request.ApplicationPath;
             }
 
-            return Json(new MvcAjaxResponse { TargetUrl = returnUrl });
+            return Json(new AjaxResponse { TargetUrl = returnUrl });
         }
 
         public ActionResult Logout()

@@ -17,6 +17,7 @@ using Abp.MultiTenancy;
 using Abp.Organizations;
 using Abp.Runtime.Caching;
 using Abp.Samples.Blog;
+using Abp.Samples.Blog.Domain.Repositories;
 using Abp.Samples.Blog.EntityFramework;
 using Abp.Zero.Configuration;
 using Abp.Zero.EntityFramework;
@@ -59,22 +60,16 @@ namespace SampleApplication
     public class UserStore : AbpUserStore<Role, User>
     {
         public UserStore(
-            IRepository<User, long> userRepository,
-            IRepository<UserLogin, long> userLoginRepository,
-            IRepository<UserRole, long> userRoleRepository,
-            IRepository<Role> roleRepository,
-            IRepository<UserPermissionSetting, long> userPermissionSettingRepository,
-            IUnitOfWorkManager unitOfWorkManager,
-            IRepository<UserClaim, long> userCliamRepository
-        )
-            : base(
-                userRepository,
-                userLoginRepository,
-                userRoleRepository,
-                roleRepository,
-                userPermissionSettingRepository,
-                unitOfWorkManager,
-                userCliamRepository)
+            ISampleBlogRepository<User, long> userRepository,
+            ISampleBlogRepository<UserLogin, long> userLoginRepository,
+            ISampleBlogRepository<UserRole, long> userRoleRepository,
+            ISampleBlogRepository<Role> roleRepository,
+            ISampleBlogRepository<UserPermissionSetting, long> userPermissionSettingRepository, 
+            IUnitOfWorkManager unitOfWorkManager, 
+            ISampleBlogRepository<UserClaim, long> userClaimRepository,
+            ISampleBlogRepository<UserOrganizationUnit, long> userOrganizationUnitRepository,
+            ISampleBlogRepository<OrganizationUnitRole, long> organizationUnitRoleRepository) 
+            : base(userRepository, userLoginRepository, userRoleRepository, roleRepository, userPermissionSettingRepository, unitOfWorkManager, userClaimRepository, userOrganizationUnitRepository, organizationUnitRoleRepository)
         {
         }
     }
@@ -132,13 +127,10 @@ namespace SampleApplication
             IPermissionManager permissionManager,
             IRoleManagementConfig roleManagementConfig,
             ICacheManager cacheManager,
-            IUnitOfWorkManager unitOfWorkManager)
-            : base(
-            store,
-            permissionManager,
-            roleManagementConfig,
-            cacheManager,
-            unitOfWorkManager)
+            IUnitOfWorkManager unitOfWorkManager,
+            IRepository<OrganizationUnit, long> organizationUnitRepository,
+            IRepository<OrganizationUnitRole, long> organizationUnitRoleRepository) 
+            : base(store, permissionManager, roleManagementConfig, cacheManager, unitOfWorkManager, organizationUnitRepository, organizationUnitRoleRepository)
         {
         }
     }

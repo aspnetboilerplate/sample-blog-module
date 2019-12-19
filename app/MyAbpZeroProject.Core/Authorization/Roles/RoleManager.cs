@@ -1,6 +1,8 @@
 using Abp.Authorization;
 using Abp.Authorization.Roles;
+using Abp.Domain.Repositories;
 using Abp.Domain.Uow;
+using Abp.Organizations;
 using Abp.Runtime.Caching;
 using Abp.Zero.Configuration;
 using MyAbpZeroProject.Users;
@@ -14,13 +16,10 @@ namespace MyAbpZeroProject.Authorization.Roles
             IPermissionManager permissionManager,
             IRoleManagementConfig roleManagementConfig,
             ICacheManager cacheManager,
-            IUnitOfWorkManager unitOfWorkManager)
-            : base(
-                store,
-                permissionManager,
-                roleManagementConfig,
-                cacheManager,
-                unitOfWorkManager)
+            IUnitOfWorkManager unitOfWorkManager,
+            IRepository<OrganizationUnit, long> organizationUnitRepository,
+            IRepository<OrganizationUnitRole, long> organizationUnitRoleRepository)
+            : base(store, permissionManager, roleManagementConfig, cacheManager, unitOfWorkManager, organizationUnitRepository, organizationUnitRoleRepository)
         {
         }
     }
